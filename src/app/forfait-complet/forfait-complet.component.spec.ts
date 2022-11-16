@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ForfaitComponent } from './forfait.component';
+import { ForfaitCompletComponent } from './forfait-complet.component';
 
-describe('ForfaitComponent', () => {
-  let component: ForfaitComponent;
-  let fixture: ComponentFixture<ForfaitComponent>;
+describe('ForfaitCompletComponent', () => {
+  let component: ForfaitCompletComponent;
+  let fixture: ComponentFixture<ForfaitCompletComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ForfaitComponent ]
+      declarations: [ ForfaitCompletComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ForfaitComponent);
+    fixture = TestBed.createComponent(ForfaitCompletComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

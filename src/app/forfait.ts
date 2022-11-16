@@ -10,6 +10,8 @@ export interface Forfait {
     etablissementProps: EtablissementProps,
     dateDebut: string,
     dateFin: string,
-    prix: number,
+    prix: string,
+    nouveauPrix: string,
+    prenium: boolean,
     avisProps: AvisProps
 }

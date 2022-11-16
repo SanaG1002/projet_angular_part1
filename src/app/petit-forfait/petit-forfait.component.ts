@@ -2,20 +2,17 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Forfait } from '../forfait';
 
 @Component({
-  selector: 'app-forfait',
-  templateUrl: './forfait.component.html',
-  styleUrls: ['./forfait.component.css']
+  selector: 'app-petit-forfait',
+  templateUrl: './petit-forfait.component.html',
+  styleUrls: ['./petit-forfait.component.css']
 })
-export class ForfaitComponent implements OnInit {
+export class PetitForfaitComponent implements OnInit {
+
   @Input() forfait?: Forfait;
-  
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
 }
-
-
-
-

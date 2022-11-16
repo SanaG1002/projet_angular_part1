@@ -1,5 +1,7 @@
+import { CoordonneesProps } from "./coordonneesProps";
+
 export interface EtablissementProps {
     nomEtablissement?: string,
-    coordoneesEtablissement?: string,
+    coordoneesEtablissement?: CoordonneesProps,
     descriptionEtablissement?: string,
 }

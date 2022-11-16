@@ -4,13 +4,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListeForfaitComponent } from './liste-forfait/liste-forfait.component';
-import { ForfaitComponent } from './forfait/forfait.component';
+import { ForfaitCompletComponent } from './forfait-complet/forfait-complet.component';
+import { FormGestionForfaitComponent } from './form-gestion-forfait/form-gestion-forfait.component';
+import { FormRechercheComponent } from './form-recherche/form-recherche.component';
+import { PetitForfaitComponent } from './petit-forfait/petit-forfait.component';
+import { PrixComponent } from './prix/prix.component';
+import { ImageComponent } from './image/image.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListeForfaitComponent,
-    ForfaitComponent,
+    ForfaitCompletComponent,
+    FormGestionForfaitComponent,
+    FormRechercheComponent,
+    PetitForfaitComponent,
+    PrixComponent,
+    ImageComponent
   ],
   imports: [
     BrowserModule,
