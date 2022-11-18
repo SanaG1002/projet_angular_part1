@@ -1,7 +1,12 @@
 <p>forfait complet</p>
 
+<div>
+    <app-infos-forfait  [nom]="forfait?.nom" [description]="forfait?.description" [code]="forfait?.code" [categorie]="forfait?.categorie" [dateDebut]="forfait?.dateDebut" [dateFin]="forfait?.dateFin" ></app-infos-forfait>
+    <app-etablissement-props [nomEtablissement]="etablissementProps?.nomEtablissement" [descriptionEtablissement]="etablissementProps?.descriptionEtablissement"></app-etablissement-props>    
+</div>
+
 <div class="flex">
     <div class="blocDroite">
-        <app-prix></app-prix>
+        <app-prix  [prix]="forfait?.prix"></app-prix>
     </div>
 </div>

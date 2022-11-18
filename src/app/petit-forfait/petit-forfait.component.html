@@ -3,8 +3,10 @@
 <div class="flex">
     <app-image></app-image>
     <div class="blocCentre">
-       
+            <app-infos-forfait  [nom]="forfait?.nom" [dateDebut]="forfait?.dateDebut" [dateFin]="forfait?.dateFin" ></app-infos-forfait>
+            <app-etablissement-props [nomEtablissement]="etablissementProps?.nomEtablissement"></app-etablissement-props>    
     </div>
+
     <div class="blocDroite">
         <app-prix [prix]="forfait?.prix"></app-prix>
     </div>
