@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+
 @Component({
   selector: 'app-infos-forfait',
   templateUrl: './infos-forfait.component.html',
@@ -13,6 +14,7 @@ export class InfosForfaitComponent implements OnInit {
   @Input() categorie? = '';
   @Input() dateDebut? = '';
   @Input() dateFin? = ''; 
+  @Input() nomEtablissement? = ''; 
 
   
   

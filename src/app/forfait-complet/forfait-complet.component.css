@@ -2,4 +2,19 @@
     display:block;
     background-color: rgb(134, 168, 135);
     min-width: 100px;
+    padding: 20px;
+    margin: 30px 10px;
+  
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+
+.prix_flex {
+    
 }

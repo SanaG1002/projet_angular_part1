@@ -1,19 +1,23 @@
 :host {
     display: block;
-    background-color: rgb(227, 239, 246);
+    background-color: rgb(179, 210, 230);
+    padding: 10px;
+    margin: 10px ;
+    border: 2px solid rgb(70, 70, 70);
+    
 }
-
+ 
 .flex {
     display: flex;
-    flex-wrap: wrap;
-} 
-
-.blocCentre {
-    min-width: 150px;
-    flex-grow: 8;
+    justify-content: space-between;
+    
 }
 
-.blocDroite {
-    flex-grow: 1;
-    min-width: 100px;
+.petiForfaitImg  {
+    width: 50%;
+}
+
+
+.blocRight {
+    width: 50%;
 }

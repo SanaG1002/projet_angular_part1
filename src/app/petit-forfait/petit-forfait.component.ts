@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Etablissement } from '../etablissement';
 import { Forfait } from '../forfait';
 
-import { EtablissementProps } from '../etablissementProps';
 
 @Component({
   selector: 'app-petit-forfait',
@@ -11,7 +11,7 @@ import { EtablissementProps } from '../etablissementProps';
 export class PetitForfaitComponent implements OnInit {
 
   @Input() forfait?: Forfait;
-  @Input() etablissementProps?: EtablissementProps;
+  @Input() etablissement?: Etablissement;
 
   constructor() { }
 

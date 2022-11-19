@@ -1,17 +1,20 @@
-import { AvisProps } from "./avisProps"
-import { EtablissementProps } from "./etablissementProps"
+
+import { Avis } from "./avis"
+import { Etablissement } from "./etablissement"
+
 
 export interface Forfait {
-    id?: number,
-    nom: string,
-    description: string,
-    code: string,
-    categorie: string,
-    etablissementProps: EtablissementProps,
-    dateDebut: string,
-    dateFin: string,
-    prix: string,
-    nouveauPrix: string,
-    prenium: boolean,
-    avisProps: AvisProps
+    $d?: number,
+    image?: string,
+    nom?: string,
+    description?: string,
+    code?: string,
+    categorie?: string,
+    etablissement?: Etablissement,
+    dateDebut?: string,
+    dateFin?: string,
+    prix?: string,
+    nouveauPrix?: string,
+    prenium?: boolean,
+    avis?: Avis
 }

@@ -1,4 +1,4 @@
-export interface AvisProps {
+export interface Avis {
     note?: number,
     commentaire?: string,
 }

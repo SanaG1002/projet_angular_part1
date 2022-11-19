@@ -11,9 +11,8 @@ import { PetitForfaitComponent } from './petit-forfait/petit-forfait.component';
 import { PrixComponent } from './prix/prix.component';
 import { ImageComponent } from './image/image.component';
 import { InfosForfaitComponent } from './infos-forfait/infos-forfait.component';
-import { EtablissementPropsComponent } from './etablissement-props/etablissement-props.component';
-import { CoordonneesPropsComponent } from './coordonnees-props/coordonnees-props.component';
-import { AvisPropsComponent } from './avis-props/avis-props.component';
+import { PreniumListeForfaitComponent } from './prenium-liste-forfait/prenium-liste-forfait.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,13 +25,13 @@ import { AvisPropsComponent } from './avis-props/avis-props.component';
     PrixComponent,
     ImageComponent,
     InfosForfaitComponent,
-    EtablissementPropsComponent,
-    CoordonneesPropsComponent,
-    AvisPropsComponent
+    PreniumListeForfaitComponent,
+  
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

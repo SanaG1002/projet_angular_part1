@@ -1,14 +1,15 @@
 import { Forfait } from "./forfait";
 
-export const FORFAITS: Forfait[] = [
+export const  FORFAITS: Forfait[] = [
     {
         nom: "DSW",
+        image: "https://cdn.pixabay.com/photo/2022/10/24/18/10/street-7544046__340.jpg",
         description: "qui Lorem fugiat commodo consequat Lorem est veniam irure occaecat anim est eiusmod pariatur aute",
         code: "1FTCE1EL6B6460F8W",
         categorie: "pariat",
-        etablissementProps: {
+        etablissement: {
             nomEtablissement: "Triumph Group",
-            coordoneesEtablissement: {
+            coordonneesEtablissement: {
                 adresseEtablissement: "061 Mavis Lights",
                 villeEtablissement: "Kalvarija",
                 telephoneEtablissement: "(546) 731-2526",
@@ -22,20 +23,21 @@ export const FORFAITS: Forfait[] = [
         prix: "$3 704,65",
         nouveauPrix: "$3 882.15",
         prenium: true,
-        avisProps: {
-            "note": 10,
-            "commentaire": "culpa ipsum consectetur reprehenderit"
+        avis: {
+            note: 10,
+            commentaire: "culpa ipsum consectetur reprehenderit"
         }
     },
 
     {
         nom: "iHeartMedia",
+        image: "https://cdn.pixabay.com/photo/2022/05/22/13/21/healthy-7213383_640.jpg",
         description: "deserunt id eu laboris cupidatat sit",
         code: "2FTRW08ZX3FP2AZ2H",
         categorie: "nostrud elit ut si",
-        etablissementProps: {
+        etablissement: {
             nomEtablissement: "Mercury General",
-            coordoneesEtablissement: {
+            coordonneesEtablissement: {
                 adresseEtablissement: "349 Hermiston Cape",
                 villeEtablissement: "Al Qābil",
                 telephoneEtablissement: "(160) 368-4979",
@@ -49,20 +51,21 @@ export const FORFAITS: Forfait[] = [
         prix: "$4,960.91",
         nouveauPrix: "$2,771.99",
         prenium: false,
-        avisProps: {
+        avis: {
             note: 4,
-            commentaire: ""
+            commentaire: "labore aliquip est reprehenderit voluptate elit adipisicing"
         }
     },
 
     {
         nom: "Westar Energy",
+        image: "https://cdn.pixabay.com/photo/2022/10/05/05/40/sunset-7499759__340.jpg",
         description: "voluptate excepteur nostrud deserunt consectetur elit dolore aliqua non dolor adipisicing qui mollit dolor veniam amet anim deserunt exercitation commodo dolor sit nostrud duis officia nostrud tempor enim id duis ut ut magna aliqua veniam anim eu elit Lorem sint fugiat cillum ut est dolore reprehenderit",
         code: "1GNKRGDD0BSDK183D",
         categorie: "quis id aute proid",
-        etablissementProps: {
+        etablissement: {
             nomEtablissement: "GameStop",
-            coordoneesEtablissement: {
+            coordonneesEtablissement: {
                 adresseEtablissement: "576 Pacocha Lane",
                 villeEtablissement: "Wan Chai",
                 telephoneEtablissement: "(714) 484-4252",
@@ -76,7 +79,7 @@ export const FORFAITS: Forfait[] = [
         prix: "$5,136.26",
         nouveauPrix: "$1,715.02",
         prenium: true,
-        avisProps: {
+        avis: {
             note: 8,
             commentaire: "cillum aliquip commodo voluptate minim occaecat anim mollit mollit occaecat id nulla irure dolore non duis do"
         }
@@ -84,12 +87,13 @@ export const FORFAITS: Forfait[] = [
 
     {
         nom: "Mutual of Omaha Insurance",
+        image: "https://cdn.pixabay.com/photo/2022/09/29/17/15/halloween-7487706__340.jpg",
         description: "proident consectetur ad irure labore enim irure reprehenderit nostrud ullamco elit nulla consectetur sunt occaecat deserunt fugiat dolore anim dolor irure labore irure",
         code: "1GBKC34G02R17RF9H",
         categorie: "mollit ut ea cillum",
-        etablissementProps: {
+        etablissement: {
             nomEtablissement: "AES",
-            coordoneesEtablissement: {
+            coordonneesEtablissement: {
                 adresseEtablissement: "62730 Hettinger Road",
                 villeEtablissement: "Dhaunkal",
                 telephoneEtablissement: "(301) 717-8141",
@@ -103,7 +107,7 @@ export const FORFAITS: Forfait[] = [
         prix: "$1,064.06",
         nouveauPrix: "$2,922.76",
         prenium: true,
-        avisProps: {
+        avis: {
             note: 2,
             commentaire: "amet aliquip laborum Lorem cupidatat ad exercitation deserunt minim nostrud irure est labore magna labore incididunt in elit ea duis consectetur aliquip amet proident cupidatat cupidatat in Lorem dolor qui ullamco et voluptate nulla et excepteur nostrud non officia ullamco Lorem ea laboris mollit anim reprehenderit culpa"
         }
@@ -111,12 +115,13 @@ export const FORFAITS: Forfait[] = [
 
     {
         nom: "Brocade Communications Systems",
+        image: "https://cdn.pixabay.com/photo/2022/09/17/08/47/piano-7460435__340.jpg",
         description: "non excepteur in magna consequat ut eu duis officia tempor cillum cillum aute ea ad exercitation anim officia minim non nulla non magna laboris irure officia pariatur quis qui aliqua id adipisicing aute velit ullamco incididunt incididunt laborum sit incididunt esse sunt ad velit duis dolor non consequat",
         code: "KLAJD82Z6YCYTLEZV",
         categorie: "ea non ea cillum c",
-        etablissementProps: {
+        etablissement: {
             nomEtablissement: "EMCOR Group",
-            coordoneesEtablissement: {
+            coordonneesEtablissement: {
                 adresseEtablissement: "88571 Lindsay Cape",
                 villeEtablissement: "Grytviken",
                 telephoneEtablissement: "(767) 597-3846",
@@ -130,20 +135,21 @@ export const FORFAITS: Forfait[] = [
         prix: "$4,273.05",
         nouveauPrix: "$3,326.14",
         prenium: true,
-        avisProps: {
-            "note": 6,
-            "commentaire": "pariatur ipsum eu nisi aliqua magna quis consequat commodo commodo reprehenderit laboris enim mollit adipisicing ipsum est reprehenderit non ad mollit cillum aliquip eiusmod aliquip tempor cillum commodo aliqua dolore ea ut officia commodo elit excepteur non cupidatat nulla consectetur amet ex nulla anim enim consequat est irure sit"
+        avis: {
+            note: 6,
+            commentaire: "pariatur ipsum eu nisi aliqua magna quis consequat commodo commodo reprehenderit laboris enim mollit adipisicing ipsum est reprehenderit non ad mollit cillum aliquip eiusmod aliquip tempor cillum commodo aliqua dolore ea ut officia commodo elit excepteur non cupidatat nulla consectetur amet ex nulla anim enim consequat est irure sit"
         }
     },
 
     {
         nom: "Moog",
+        image: "https://cdn.pixabay.com/photo/2022/08/21/17/47/color-7401750__340.jpg",
         description: "sunt dolor do proident culpa do duis cupidatat anim culpa eu duis proident fugiat in voluptate sit fugiat cillum pariatur anim officia mollit officia labore consequat culpa veniam aute aliquip nulla eu et Lorem ut id ea veniam cupidatat pariatur occaecat pariatur sit cillum non sint",
         code: "4M2EU468X6M0KPKCT",
         categorie: "do elit amet",
-        etablissementProps: {
+        etablissement: {
             nomEtablissement: "Crown Holdings",
-            coordoneesEtablissement: {
+            coordonneesEtablissement: {
                 adresseEtablissement: "098 Clare View",
                 villeEtablissement: "Kieta",
                 telephoneEtablissement: "(239) 657-8549",
@@ -157,20 +163,21 @@ export const FORFAITS: Forfait[] = [
         prix: "$4,590.03",
         nouveauPrix: "$5,179.79",
         prenium: false,
-        avisProps: {
-            "note": 8,
-            "commentaire": "esse adipisicing tempor esse ullamco esse veniam excepteur ea culpa esse dolor aliqua consequat veniam nisi ad nulla pariatur et dolore ex voluptate deserunt adipisicing culpa sint et ullamco enim ea ipsum dolor nulla enim ullamco minim et commodo id nisi aliqua labore incididunt dolore"
+        avis: {
+            note: 8,
+            commentaire: "esse adipisicing tempor esse ullamco esse veniam excepteur ea culpa esse dolor aliqua consequat veniam nisi ad nulla pariatur et dolore ex voluptate deserunt adipisicing culpa sint et ullamco enim ea ipsum dolor nulla enim ullamco minim et commodo id nisi aliqua labore incididunt dolore"
         }
     },
 
     {
         nom: "Brunswick",
+        image: "https://cdn.pixabay.com/photo/2022/08/31/13/05/sea-7423274__340.jpg",
         description: "veniam cillum irure in nisi ut pariatur est excepteur esse eu exercitation laborum commodo incididunt est exercitation eu ad proident anim excepteur",
         code: "1LNFM84V48ZCEXF5N",
         categorie: "",
-        etablissementProps: {
+        etablissement: {
             nomEtablissement: "Brink's",
-            coordoneesEtablissement: {
+            coordonneesEtablissement: {
                 adresseEtablissement: "32033 Greg Trail",
                 villeEtablissement: "Layou",
                 telephoneEtablissement: "(111) 421-2246",
@@ -184,20 +191,21 @@ export const FORFAITS: Forfait[] = [
         prix: "$5,166.51",
         nouveauPrix: "$1,645.65",
         prenium: true,
-        avisProps: {
+        avis: {
             note: 9,
-            commentaire: ""
+            commentaire: "labore aliquip est reprehenderit voluptate elit adipisicing"
         }
     },
 
     {
         nom: "Southern",
+        image: "https://cdn.pixabay.com/photo/2022/02/15/13/00/building-7014904__340.jpg",
         description: "sint excepteur",
         code: "2HKRL482754THG8BT",
         categorie: "aliquip id consequat",
-        etablissementProps: {
+        etablissement: {
             nomEtablissement: "Goldman Sachs Group",
-            coordoneesEtablissement: {
+            coordonneesEtablissement: {
                 adresseEtablissement: "675 Rutherford Valley",
                 villeEtablissement: "Tumeremo",
                 telephoneEtablissement: "(198) 289-3063",
@@ -211,20 +219,21 @@ export const FORFAITS: Forfait[] = [
         prix: "$5,384.49",
         nouveauPrix: "$3,900.78",
         prenium: false,
-        avisProps: {
+        avis: {
             note: 6,
-            commentaire: ""
+            commentaire: "labore aliquip est reprehenderit voluptate elit adipisicing labore aliquip est reprehenderit voluptate elit adipisicing"
         }
     },
 
     {
         nom: "PPL",
+        image: "https://cdn.pixabay.com/photo/2021/10/27/09/36/elephants-6746586__340.jpg",
         description: "minim Lorem eu non laboris esse et voluptate quis nostrud adipisicing non quis sunt sint ex irure culpa ex irure irure esse dolor ex minim aute quis esse cillum sint tempor dolor duis nostrud cillum reprehenderit ullamco laboris ut velit culpa anim pariatur",
         code: "JTHBL5KS4BFJ9CNB3",
         categorie: "occaecat duis mi",
-        etablissementProps: {
+        etablissement: {
             nomEtablissement: "Keurig Green Mountain",
-            coordoneesEtablissement: {
+            coordonneesEtablissement: {
                 adresseEtablissement: "350 Brenda Court",
                 villeEtablissement: "Singapore",
                 telephoneEtablissement: "(922) 437-0230",
@@ -238,7 +247,7 @@ export const FORFAITS: Forfait[] = [
         prix: "$2,697.89",
         nouveauPrix: "$5,295.36",
         prenium: false,
-        avisProps: {
+        avis: {
             note: 3,
             commentaire: "voluptate nisi"
         }
@@ -246,12 +255,13 @@ export const FORFAITS: Forfait[] = [
 
     {
         nom: "MRC Global",
-        description: "",
+        image: "https://cdn.pixabay.com/photo/2022/04/18/13/27/yoga-7140566__340.jpg",
+        description: "incididunt consectetur sint laborum pariatur mollit cillum minim occaecat",
         code: "1GTHK23D37VRV7WP7",
         categorie: "ullamco enim amet ",
-        etablissementProps: {
+        etablissement: {
             nomEtablissement: "AutoNation",
-            coordoneesEtablissement: {
+            coordonneesEtablissement: {
                 adresseEtablissement: "266 Erdman Islands",
                 villeEtablissement: "Gaalkacyo",
                 telephoneEtablissement: "(386) 188-7349",
@@ -265,7 +275,7 @@ export const FORFAITS: Forfait[] = [
         prix: "$3,238.95",
         nouveauPrix: "$1,449.71",
         prenium: false,
-        avisProps: {
+        avis: {
             note: 8,
             commentaire: "enim et minim duis duis qui do fugiat cupidatat esse id deserunt cupidatat cupidatat deserunt anim cillum adipisicing officia commodo commodo tempor nostrud excepteur elit ipsum esse ea consequat consectetur consequat dolor consectetur ullamco proident ex labore"
         }

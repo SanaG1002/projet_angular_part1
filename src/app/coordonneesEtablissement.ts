@@ -1,4 +1,4 @@
-export interface CoordonneesProps {
+export interface CoordonneesEtablissement {
     adresseEtablissement?: string,
     villeEtablissement?: string,
     telephoneEtablissement?: string,
