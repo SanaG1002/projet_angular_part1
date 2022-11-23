@@ -10,8 +10,9 @@ import { Forfait } from '../forfait';
 })
 export class PetitForfaitComponent implements OnInit {
 
+  
   @Input() forfait?: Forfait;
-  @Input() etablissement?: Etablissement;
+  @Input() etablissement?: Etablissement;  
 
   constructor() { }
 

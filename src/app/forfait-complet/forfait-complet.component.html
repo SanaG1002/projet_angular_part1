@@ -1,13 +1,19 @@
-<p>forfait complet</p>
+
 
 <div class="flex">
-    <app-image [image]="forfait?.image"></app-image>
+    <div class="forfaitCompletFlex">
+        <app-image [image]="forfait?.image" ></app-image>
+        <div>
+                
+            <app-infos-forfait  [nom]="forfait?.nom" ></app-infos-forfait>
 
-    <div>
-        <app-prix class="prix_flex " [prix]="forfait?.prix"></app-prix>
+            <app-prix [prix]="forfait?.prix" [nouveauPrix]="forfait?.nouveauPrix"></app-prix>
+           
+            
+        </div>
+
+        <app-infos-forfait  [description]="forfait?.description" [code]="forfait?.code" [categorie]="forfait?.categorie" [dateDebut]="forfait?.dateDebut" [dateFin]="forfait?.dateFin" ></app-infos-forfait>
+       
     </div>
 </div>
 
-<app-infos-forfait  [nom]="forfait?.nom" [description]="forfait?.description" [code]="forfait?.code" [categorie]="forfait?.categorie" [dateDebut]="forfait?.dateDebut" [dateFin]="forfait?.dateFin" ></app-infos-forfait>
- 
-   

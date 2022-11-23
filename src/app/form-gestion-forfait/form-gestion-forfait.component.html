@@ -1,1 +1,110 @@
-<p>form-gestion-forfait works!</p>
+
+<form class="formGestionForfait">
+    <div class="formSizeLab">
+        <mat-form-field appearance="fill">
+            <mat-label>Nom du forfait</mat-label>
+            <input matInput placeholder="Nom">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field >
+            <mat-label>Description</mat-label>
+            <textarea matInput placeholder="Décrire le forfait"></textarea>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label> Nom de l'établissement</mat-label>
+            <input matInput placeholder="Nom établissement">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>
+                Adresse de l'établissement
+            </mat-label>
+            <input matInput placeholder="Adresse">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>
+                ville de l'établissement
+            </mat-label>
+            <input matInput placeholder="Ville">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>
+                Téléphone de l'établissement
+            </mat-label>
+            <input matInput type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="(555) 555-555">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field >
+            <mat-label>
+                Email
+            </mat-label>
+            <input type="email" matInput placeholder="pat@example.com">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field >
+            <mat-label>
+                Site web
+            </mat-label>
+            <input type="url" matInput pattern="https://.*" placeholder="https://example.com">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field >
+            <mat-label>Description de l'établissement</mat-label>
+            <textarea matInput placeholder="Décrire l'établissement"></textarea>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Date de début</mat-label>
+            <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Date de fin</mat-label>
+                <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+
+            <div>
+                <section class="example-section">
+                <mat-checkbox class="example-margin">Prénium</mat-checkbox>
+                </section>
+                </div>
+
+                <div>
+                    <mat-form-field appearance="fill">
+                        <mat-label>
+                            Prix du forfait
+                        </mat-label>
+                        <input matInput type="number" placeholder="Prix">
+                    </mat-form-field>
+                </div>
+
+                <div>
+                    <mat-form-field appearance="fill">
+                        <mat-label>
+                            Nouveau prix du forfait
+                        </mat-label>
+                        <input matInput type="number" placeholder="Prix">
+                    </mat-form-field>
+                </div>
+</form>

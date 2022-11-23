@@ -1,3 +1,37 @@
 :host {
     display:block;
+    min-width: 100px;
+    padding: 20px;
 }
+
+.favori{
+    color: red;
+}
+.forfaitCompletCard {
+    padding: 0;
+    background-color: rgb(134, 168, 135);
+    margin: 30px 10px;
+}
+
+.forfaitCompletFlex {
+    display: flex;
+    flex-direction: row;
+}
+
+.forfaitCompletImg {
+    width: 25%;
+    padding-top: 5px;
+}
+
+.forfaitPrenium {
+    border: red;
+}
+
+.prixBarre {
+    text-decoration: line-through;
+    }
+
+    .prixCache {
+        display: none;
+        }
+    

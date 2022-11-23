@@ -1,5 +1,43 @@
 
 
+<div *ngFor="let f of forfaits" >
+    
+    <mat-card class="forfaitCompletCard">
+       <div class="forfaitCompletFlex">
+            <img mat-card-image src={{f.image}} class="forfaitCompletImg" alt="Lorem ipsum">
+            <div>
+                <mat-card-header>
+                    <mat-card-title>{{ f.nom }}</mat-card-title>
+                    <mat-card-title> 
+                        <mat-card-subtitle >
+                            <div *ngIf="!f.nouveauPrix;">
+                                {{f.prix}} $
+                            </div>
+                            
+                            <div *ngIf="f.nouveauPrix; else elseBlock">
+                                
+                                <div  [ngClass]="{'prixBarre' : 'nouveauPrix'}"> 
+                                    <h3> {{f.prix}} $</h3> 
+                                </div>
+                                <div *ngIf="f.nouveauPrix">
+                                    <h3> {{f.nouveauPrix}} $ </h3>
+                                </div>
+                                <div *ngIf="f.prix && f.nouveauPrix">
+                                    <h4> {{f.prix-f.nouveauPrix}} $ </h4>
+                                </div>
+                            </div>
+                        <ng-template #elseBlock>
+                            {{f.prix}} $
+                        </ng-template>
 
-<app-forfait-complet *ngFor="let f of forfaits" [forfait]="f" ></app-forfait-complet>
+                        </mat-card-subtitle>
+                    </mat-card-title>
+                </mat-card-header>
 
+                <mat-card-content>
+                    <p>{{ f.description }}</p>
+                </mat-card-content>
+            </div>
+        </div>
+    </mat-card>
+</div>

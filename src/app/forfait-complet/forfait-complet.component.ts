@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Etablissement } from '../etablissement';
 import { Forfait } from '../forfait';
 
 
@@ -10,7 +11,7 @@ import { Forfait } from '../forfait';
 })
 export class ForfaitCompletComponent implements OnInit {
   @Input() forfait?: Forfait;
-  
+  @Input() etablissement?: Etablissement;  
 
   constructor() { }
 

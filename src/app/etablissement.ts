@@ -6,7 +6,7 @@ export interface Etablissement {
         villeEtablissement?: string,
         telephoneEtablissement?: string,
         courrielEtablissement?: string,
-        site_webEtablissement?: string,
+        siteWebEtablissement?: string,
     }
     descriptionEtablissement?: string,
 }

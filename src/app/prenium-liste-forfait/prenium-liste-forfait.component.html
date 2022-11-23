@@ -1,7 +1,56 @@
 <p>prenium-liste-forfait works!</p>
+ <!-- 
+<div class="flexListePrenium ">
 
-<div class="flex ">
         <app-petit-forfait [forfait]="forfaits[2]" ></app-petit-forfait>
         <app-petit-forfait [forfait]="forfaits[3]" ></app-petit-forfait>
-        <app-petit-forfait [forfait]="forfaits[7]" ></app-petit-forfait>
+        <app-petit-forfait [forfait]="forfaits[4]" ></app-petit-forfait>
+       
+</div> 
+-->
+
+<div class="flexListePrenium" *ngFor="let f of forfaits" >
+        <div *ngIf="f.prenium">
+                <mat-card class="cardPetitForfait"  >
+               
+                        <mat-card-header class="cardPetitForfaitHeader">
+                                <mat-card-title-group>
+                                        <img mat-card-image src={{f.image}} class="cardPetitForfaitImg" alt="Photo of a Shiba Inu">
+                                        <mat-card-title> 
+                                                {{f.nom}}
+                                        </mat-card-title>
+                                        <mat-card-subtitle> 
+                                                <div *ngIf="f.prix">
+                                                        <mat-card-subtitle >
+                                                        <h3>  {{f?.prix}} $ </h3>
+                                                        </mat-card-subtitle>
+                                                </div>
+
+                                                <div  [ngClass]="{'prixBarre' : 'nouveauPrix'}">
+                                                        <mat-card-subtitle >
+                                                        <h3>  {{f.nouveauPrix}} $</h3> 
+                                                        </mat-card-subtitle>
+                                                </div>
+
+                                                <div *ngIf="f.nouveauPrix">
+                                                        <mat-card-subtitle >
+                                                        <h3>  {{f?.nouveauPrix}} $ </h3>
+                                                        </mat-card-subtitle>
+                                                </div>
+
+                                                <div *ngIf="f.prix && f.nouveauPrix">
+                                                        <mat-card-subtitle >
+                                                                <h4>    {{f.prix-f.nouveauPrix}} $ </h4>
+                                                        </mat-card-subtitle>
+                                                </div>
+                                        </mat-card-subtitle>
+                                </mat-card-title-group>
+                        </mat-card-header>
+                        <mat-card-content>
+                                <p>{{f.etablissement.nomEtablissement}}</p>
+                                <p>{{f.dateDebut}} - {{f.dateFin}}</p> 
+                        </mat-card-content>
+                
+                </mat-card>
+        </div>
 </div>

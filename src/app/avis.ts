@@ -1,4 +1,4 @@
 export interface Avis {
-    note?: number,
-    commentaire?: string,
+    note: number,
+    commentaire: string,
 }

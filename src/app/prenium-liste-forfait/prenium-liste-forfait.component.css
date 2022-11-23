@@ -1,7 +1,36 @@
 :host {
     display:block;
+    padding: 10px;
+    margin: 10px ;
 }
 
-.flex{
+
+.cardPetitForfait {
+    margin-bottom: 8px;
+    height: 400px;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(16, 75, 51);
+    color: azure;
+  }
+
+  .cardPetitForfaitHeader {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap
+  }
+
+  .cardPetitForfaitImg {
+    padding-left: 50px;
+  }
+
+.price {
+    color: #f0ffff;
+    font-size: 25px;
+    font-weight: 200;
+}
+
+.prixBarre {
+text-decoration: line-through;
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FORFAITS } from '../mock-forfaits';
 
 @Component({
@@ -8,6 +8,7 @@ import { FORFAITS } from '../mock-forfaits';
 })
 export class ListeForfaitComponent implements OnInit {
   forfaits = FORFAITS
+
 
   constructor() { }
 

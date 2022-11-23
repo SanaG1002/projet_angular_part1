@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form-gestion-forfait.component.css']
 })
 export class FormGestionForfaitComponent implements OnInit {
-
-  constructor() { }
+  minDate: Date;
+  maxDate: Date;
+  constructor() {
+    const currentYear = new Date().getFullYear();
+    this.minDate = new Date(currentYear - 20, 0, 1);
+    this.maxDate = new Date(currentYear + 1, 11, 31);
+   }
 
   ngOnInit(): void {
   }
-
+  checked = false;
+  indeterminate = false;
+  labelPosition: 'before' | 'after' = 'after';
+  disabled = false;
 }

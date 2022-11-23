@@ -13,6 +13,20 @@ import { ImageComponent } from './image/image.component';
 import { InfosForfaitComponent } from './infos-forfait/infos-forfait.component';
 import { PreniumListeForfaitComponent } from './prenium-liste-forfait/prenium-liste-forfait.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormAvisComponent } from './form-avis/form-avis.component';
+
+import {MatCardModule} from '@angular/material/card';
+import { EtablissementComponent } from './etablissement/etablissement.component';
+
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatSliderModule} from '@angular/material/slider';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
+
 
 @NgModule({
   declarations: [
@@ -26,12 +40,24 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ImageComponent,
     InfosForfaitComponent,
     PreniumListeForfaitComponent,
-  
+    EtablissementComponent,
+    FormAvisComponent
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    MatDatepickerModule,
+    MatSliderModule,
+    MatNativeDateModule,
+    MatCheckboxModule
+
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,23 @@
+:host {
+    display:block; 
+    padding: 10px;
+    margin: 10px ;
+}
+
+.formAvis {
+    background-color: rgb(243, 215, 198);
+}
+
+mat-slider {
+    width: 300px;
+  }
+
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }

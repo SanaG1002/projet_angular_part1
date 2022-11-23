@@ -1,23 +1,18 @@
 :host {
     display: block;
-    background-color: rgb(179, 210, 230);
-    padding: 10px;
-    margin: 10px ;
-    border: 2px solid rgb(70, 70, 70);
-    
-}
- 
-.flex {
-    display: flex;
-    justify-content: space-between;
-    
-}
-
-.petiForfaitImg  {
-    width: 50%;
+   
 }
 
 
-.blocRight {
-    width: 50%;
+
+.flexListePrenium{
+  display: flex;
+  flex-direction: row;
 }
+
+
+.forfaitCompletImg {
+  height: 100%;
+  padding-top: 5px;
+}
+
