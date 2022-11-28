@@ -3,8 +3,10 @@
 
 <div class="flex">
     <app-infos-forfait  [prenium]="forfait?.prenium" ></app-infos-forfait>
-        <div class="forfaitCompletFlex">
-            <app-image [image]="forfait?.image" class="forfaitCompletImg"></app-image>
+        <div >
+            <div>
+            <app-image [image]="forfait?.image"></app-image>
+        </div>
             <div>
                     
                 <app-infos-forfait  [nom]="forfait?.nom" ></app-infos-forfait>

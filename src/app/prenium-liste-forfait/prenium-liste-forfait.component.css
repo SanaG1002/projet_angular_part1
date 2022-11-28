@@ -4,15 +4,11 @@
     margin: 10px ;
 }
 
-
 .cardPetitForfait {
-    margin-bottom: 8px;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     background-color: rgb(16, 75, 51);
     color: azure;
+    margin: 10px;
+    height: 250px;
   }
 
   .cardPetitForfaitHeader {
@@ -20,17 +16,15 @@
     flex-direction: row;
     flex-wrap: wrap
   }
-
-  .cardPetitForfaitImg {
-    padding-left: 50px;
-  }
-
-.price {
-    color: #f0ffff;
-    font-size: 25px;
-    font-weight: 200;
-}
-
+ 
 .prixBarre {
 text-decoration: line-through;
+}
+
+.image {
+  width: 50%;
+}
+
+.price{
+color: #f0ffff;
 }

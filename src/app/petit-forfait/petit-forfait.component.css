@@ -5,14 +5,7 @@
 
 
 
-.flexListePrenium{
+.flex{
   display: flex;
-  flex-direction: row;
+  
 }
-
-
-.forfaitCompletImg {
-  height: 100%;
-  padding-top: 5px;
-}
-

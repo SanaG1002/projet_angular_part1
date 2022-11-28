@@ -30,7 +30,7 @@ export const  FORFAITS: Forfait[] = [
 
     {
         nom: "iHeartMedia",
-        image: "https://cdn.pixabay.com/photo/2022/05/22/13/21/healthy-7213383_640.jpg",
+        image: "https://cdn.pixabay.com/photo/2022/08/21/17/47/color-7401750__340.jpg ",
         description: ["Resto", "Voyage", "Détente", "Fun"],
         code: "2FTRW08ZX3FP2AZ2H",
         categorie: "nostrud elit ut si",
@@ -58,7 +58,7 @@ export const  FORFAITS: Forfait[] = [
 
     {
         nom: "Moog",
-        image: "https://cdn.pixabay.com/photo/2022/08/21/17/47/color-7401750__340.jpg",
+        image: "https://cdn.pixabay.com/photo/2022/05/22/13/21/healthy-7213383_640.jpg",
         description: ["Resto", "Voyage", "Détente", "Fun"],
         code: "4M2EU468X6M0KPKCT",
         categorie: "do elit amet",

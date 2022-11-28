@@ -1,1 +1,9 @@
+:host {
+    display:block;
+   
+}
 
+.flex{
+    display: flex;
+    
+  }

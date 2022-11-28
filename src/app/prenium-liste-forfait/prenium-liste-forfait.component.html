@@ -1,46 +1,36 @@
-<p>prenium-liste-forfait works!</p>
- <!-- 
-<div class="flexListePrenium ">
 
-        <app-petit-forfait [forfait]="forfaits[2]" ></app-petit-forfait>
-        <app-petit-forfait [forfait]="forfaits[3]" ></app-petit-forfait>
-        <app-petit-forfait [forfait]="forfaits[4]" ></app-petit-forfait>
-       
-</div> 
--->
 
-<div class="flexListePrenium" *ngFor="let f of forfaits" >
+<div *ngFor="let f of forfaits" >
         <div *ngIf="f.prenium">
+                
                 <mat-card class="cardPetitForfait"  >
                
                         <mat-card-header class="cardPetitForfaitHeader">
                                 <mat-card-title-group>
-                                        <img mat-card-image src={{f.image}} class="cardPetitForfaitImg" alt="Photo of a Shiba Inu">
+                                        <img mat-card-image src={{f.image}} class="image" alt="Photo of a Shiba Inu">
                                         <mat-card-title> 
                                                 {{f.nom}}
                                         </mat-card-title>
                                         <mat-card-subtitle> 
                                                 <div *ngIf="f.prix">
-                                                        <mat-card-subtitle >
-                                                        <h3>  {{f?.prix}} $ </h3>
-                                                        </mat-card-subtitle>
-                                                </div>
-
-                                                <div  [ngClass]="{'prixBarre' : 'nouveauPrix'}">
-                                                        <mat-card-subtitle >
-                                                        <h3>  {{f.nouveauPrix}} $</h3> 
-                                                        </mat-card-subtitle>
-                                                </div>
-
-                                                <div *ngIf="f.nouveauPrix">
-                                                        <mat-card-subtitle >
-                                                        <h3>  {{f?.nouveauPrix}} $ </h3>
-                                                        </mat-card-subtitle>
-                                                </div>
-
-                                                <div *ngIf="f.prix && f.nouveauPrix">
-                                                        <mat-card-subtitle >
-                                                                <h4>    {{f.prix-f.nouveauPrix}} $ </h4>
+                                                        <mat-card-subtitle class="price">
+                                                                <div *ngIf="f.nouveauPrix; else elseBlock">
+                                
+                                                                        <div  [ngClass]="{'prixBarre' : 'nouveauPrix'}"> 
+                                                                            <h3> {{f.prix}} $</h3> 
+                                                                        </div>
+                                                                        <div *ngIf="f.nouveauPrix">
+                                                                            <h3> {{f.nouveauPrix}} $ </h3>
+                                                                        </div>
+                                                                        <div *ngIf="f.prix && f.nouveauPrix">
+                                                                            <h4> {{f.prix-f.nouveauPrix}} $ </h4>
+                                                                        </div>
+                                                                    </div>
+                                                                
+                                                                <ng-template #elseBlock>
+                                                                   <div></div> {{f.prix}} $
+                                                                </ng-template>
+                                                       
                                                         </mat-card-subtitle>
                                                 </div>
                                         </mat-card-subtitle>
@@ -53,4 +43,5 @@
                 
                 </mat-card>
         </div>
+     
 </div>
