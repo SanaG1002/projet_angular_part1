@@ -27,15 +27,6 @@
     margin-left: 20px;
 }
 
-.forfaitPrenium {
-    border: red;
-}
-
 .prixBarre {
     text-decoration: line-through;
     }
-
-    .prixCache {
-        display: none;
-        }
-    

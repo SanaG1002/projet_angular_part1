@@ -1,25 +1,7 @@
 :host {
-    display:block;
-    
-  
+    display:block; 
 }
 
-.flex {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: flex-start;
-
-}
-
-.forfaitCompletCard {
-    padding: 0;
-    background-color: rgb(134, 168, 135);
-}
-
-.forfaitCompletFlex{
-    display: flex;
-}
 
 
 

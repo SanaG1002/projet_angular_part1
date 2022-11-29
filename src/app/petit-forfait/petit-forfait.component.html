@@ -1,22 +1,11 @@
-
-
-
-<div class="flex">
-    <app-infos-forfait  [prenium]="forfait?.prenium" ></app-infos-forfait>
-        <div >
-            <div>
-            <app-image [image]="forfait?.image"></app-image>
-        </div>
-            <div>
-                    
-                <app-infos-forfait  [nom]="forfait?.nom" ></app-infos-forfait>
-    
-                <app-prix [prix]="forfait?.prix"></app-prix>
-                <app-prix [nouveauPrix]="forfait?.nouveauPrix"></app-prix>
-               
-                
-            </div>
-            <app-etablissement> [nomEtablissement]="etablissement?.nomEtablissement" </app-etablissement>
-            <app-infos-forfait  [description]="forfait?.description" [code]="forfait?.code" [categorie]="forfait?.categorie" [dateDebut]="forfait?.dateDebut" [dateFin]="forfait?.dateFin" ></app-infos-forfait>
-        </div>
+<div>
+    <app-infos-forfait [prenium]="forfait?.prenium"></app-infos-forfait>
+    <div>
+        <app-image [image]="forfait?.image"></app-image>
+        <app-infos-forfait [nom]="forfait?.nom"></app-infos-forfait>
+        <app-etablissement> [nomEtablissement]="etablissement?.nomEtablissement" </app-etablissement>
+        <app-infos-forfait [dateDebut]="forfait?.dateDebut" [dateFin]="forfait?.dateFin"></app-infos-forfait>
+        <app-prix [prix]="forfait?.prix"></app-prix>
+        <app-prix [nouveauPrix]="forfait?.nouveauPrix"></app-prix>
     </div>
+</div>

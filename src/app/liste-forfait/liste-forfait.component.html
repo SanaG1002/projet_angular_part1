@@ -4,52 +4,48 @@
   
     <mat-card  [ngClass]="{'preniumStyle' : f.prenium}" class="forfaitCompletCard">
        <div class="forfaitCompletFlex">
+           
             <img mat-card-image src={{f.image}} class="forfaitCompletImg" alt="Lorem ipsum">
+           
             <div class="forfaitCompletText">
                 <mat-card-header>
-                    <mat-card-title>{{ f.nom }}</mat-card-title>
-                    <mat-card-title> 
-                        <mat-card-subtitle >
-                           <!-- <div *ngIf="!f.nouveauPrix;">
-                                {{f.prix}} $
-                            </div>-->
-                            
-                            <div *ngIf="f.nouveauPrix; else elseBlock">
-                                
-                                <div  [ngClass]="{'prixBarre' : 'nouveauPrix'}"> 
-                                    <h3> {{f.prix}} $</h3> 
-                                </div>
-                                <div *ngIf="f.nouveauPrix">
-                                    <h3> {{f.nouveauPrix}} $ </h3>
-                                </div>
-                                <div *ngIf="f.prix && f.nouveauPrix">
-                                    <h4> {{f.prix-f.nouveauPrix}} $ </h4>
-                                </div>
+                    <mat-card-title>
+                        {{ f.nom }}
+                    </mat-card-title>
+                    
+                    <mat-card-subtitle >
+                        <div *ngIf="f.nouveauPrix; else elseBlock">
+                            <div  [ngClass]="{'prixBarre' : 'nouveauPrix'}"> 
+                                <h3> {{f.prix}} $</h3> 
                             </div>
+                            <div *ngIf="f.nouveauPrix">
+                                <h3> {{f.nouveauPrix}} $ </h3>
+                            </div>
+                            <div *ngIf="f.prix && f.nouveauPrix">
+                                <h4> {{f.prix-f.nouveauPrix}} $ </h4>
+                            </div>
+                        </div>
                         <ng-template #elseBlock>
                             {{f.prix}} $
                         </ng-template>
-
-                        </mat-card-subtitle>
-                    </mat-card-title>
+                    </mat-card-subtitle>
                 </mat-card-header>
             </div>
         </div>
-                <mat-card-content>
-                    <p>{{ f.description }}</p>
-                    <p>{{ f.code }}</p>
-                    <p>{{f.categorie}}</p>
-                    <p>{{f.dateDebut}}</p>
-                    <p>{{f.dateFin}}</p>
-                    <p>{{f.etablissement.nomEtablissement}}</p>
-                   <p> {{f.etablissement.coordonneesEtablissement?.adresseEtablissement}} </p>
-                   <p> {{f.etablissement.coordonneesEtablissement?.villeEtablissement}} </p>
-                   <p> {{f.etablissement.coordonneesEtablissement?.telephoneEtablissement}} </p>
-                   <p> {{f.etablissement.coordonneesEtablissement?.courrielEtablissement}} </p>
-                   <p> {{f.etablissement.coordonneesEtablissement?.siteWebEtablissement}} </p>
-                    <p>{{f.etablissement.descriptionEtablissement}}</p>
-                </mat-card-content>
-            
-      
+
+        <mat-card-content>
+            <p>{{ f.description }}</p>
+            <p>{{ f.code }}</p>
+            <p>{{f.categorie}}</p>
+            <p>{{f.dateDebut}}</p>
+            <p>{{f.dateFin}}</p>
+            <p>{{f.etablissement.nomEtablissement}}</p>
+            <p> {{f.etablissement.coordonneesEtablissement?.adresseEtablissement}} </p>
+            <p> {{f.etablissement.coordonneesEtablissement?.villeEtablissement}} </p>
+            <p> {{f.etablissement.coordonneesEtablissement?.telephoneEtablissement}} </p>
+            <p> {{f.etablissement.coordonneesEtablissement?.courrielEtablissement}} </p>
+            <p> {{f.etablissement.coordonneesEtablissement?.siteWebEtablissement}} </p>
+            <p>{{f.etablissement.descriptionEtablissement}}</p>
+        </mat-card-content>
     </mat-card>
 </div>   
