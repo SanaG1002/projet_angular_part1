@@ -1,0 +1,53 @@
+
+
+<form  class="formContact" [formGroup]="profileForm">
+
+    <mat-form-field>
+        <mat-label>Prénom</mat-label>
+        <input matInput type="text" placeholder="Prénom" id="prenom" formControlName="prenom" aria-label="prenom">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Nom</mat-label>
+        <input matInput type="text" placeholder="Nom" formControlName="nom" aria-label="prenom">
+    </mat-form-field>
+
+
+
+
+    <mat-form-field>
+        <mat-label>Courriel</mat-label>
+        <input type="email" matInput id="courriel" formControlName="courriel" 
+                placeholder="Ex. pat@example.com">
+        <mat-hint>Errors appear instantly!</mat-hint>
+        <mat-error *ngIf="this.profileForm.get('courriel')?.invalid">Le courriel est invalide</mat-error>
+    </mat-form-field>
+
+      
+
+    
+    <mat-form-field>
+        <mat-label>Téléphone</mat-label>
+        <input matInput type="tel" placeholder="Téléphone" formControlName="telephone" aria-label="telephone">
+    </mat-form-field>
+
+    <mat-radio-group aria-label="Select an option"> Préférence de communication :
+        <mat-radio-button value="courriel">Courriel</mat-radio-button>
+        <mat-radio-button value="telephone">Téléphone</mat-radio-button>
+    </mat-radio-group>
+
+    <label for="motifChoix">Motif  </label>
+    <input id="motifChoix" type="text" formControlName="motif">
+
+    <label for="messageTexte">Message  </label>
+    <input id="messageTexte" type="text" formControlName="message">
+
+    <label for="repDate">Réponse attendue au plus tard le </label>
+    <input id="repDate" type="text" formControlName="reponse">
+
+    <label for="aPropos">Comment avez-vous attendu parler de nous </label>
+    <input id="aPropos" type="text" formControlName="aProposDeNous">
+
+    <label for="infoL">Inscription à l’infolettre   </label>
+    <input id="infoL" type="text" formControlName="infolettre">
+</form>

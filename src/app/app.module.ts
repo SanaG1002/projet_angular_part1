@@ -15,16 +15,20 @@ import { PreniumListeForfaitComponent } from './prenium-liste-forfait/prenium-li
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormAvisComponent } from './form-avis/form-avis.component';
 
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import { EtablissementComponent } from './etablissement/etablissement.component';
 
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatSliderModule} from '@angular/material/slider';
+import { MatDatepickerModule} from '@angular/material/datepicker';
+import { MatSliderModule } from '@angular/material/slider';
 import { MatNativeDateModule } from '@angular/material/core';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FormulaireContactComponent } from './formulaire-contact/formulaire-contact.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 
 
@@ -41,7 +45,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     InfosForfaitComponent,
     PreniumListeForfaitComponent,
     EtablissementComponent,
-    FormAvisComponent
+    FormAvisComponent,
+    FormulaireContactComponent
    
   ],
   imports: [
@@ -55,8 +60,10 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatDatepickerModule,
     MatSliderModule,
     MatNativeDateModule,
-    MatCheckboxModule
-
+    MatCheckboxModule,
+    ReactiveFormsModule,
+    MatRadioModule,
+    MatAutocompleteModule
   
   ],
   providers: [],
