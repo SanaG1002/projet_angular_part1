@@ -2,7 +2,7 @@
     header('Content-Type: application/json;'); 
     header('Access-Control-Allow-Origin: *'); 
     require_once './controlleurs/forfaits.php';
-    $controllerForfaits = new ControleurForfait;
+    $controllerForfaits = new ControlleurForfait;
 
     switch($_SERVER['REQUEST_METHOD']) { 
         case 'GET': // GESTION DES DEMANDES DE TYPE GET 

@@ -30,15 +30,15 @@ class modele_forfait {
     public $description_etablissement; 
     public $date_debut; 
     public $date_fin;
-    public $prix; 
+    public $prix_forfait; 
     public $prenium;
     
     /***
      * Fonction permettant de construire un objet de type modele_forfait
      */
-    public function __construct($id, $forfait, $description, $code, $nom_etablissement, $adresse_etablissement, $ville_etablissement, $telephone_etablissement, $courriel_etablissement, $site_web_etablissement, $description_etablissement, $date_debut, $date_fin, $courant_prix, $rabais_nouveau_prix, $prenium) {
+    public function __construct($id, $nom, $description, $code, $nom_etablissement, $adresse_etablissement, $ville_etablissement, $telephone_etablissement, $courriel_etablissement, $site_web_etablissement, $description_etablissement, $date_debut, $date_fin, $courant_prix, $rabais_nouveau_prix, $prenium) {
         $this->id = $id;
-        $this->nom = $forfait;
+        $this->nom = $nom;
         $this->description = $description;
         $this->code = $code;
         $this->nom_etablissement = $nom_etablissement;
@@ -52,7 +52,7 @@ class modele_forfait {
         $this->date_fin = $date_fin;
         $this->prenium = $prenium;
 
-        $this->prix = new modele_prix($courant_prix, $rabais_nouveau_prix);
+        $this->prix_forfait = new modele_prix($courant_prix, $rabais_nouveau_prix);
     }
 
     /***
@@ -85,7 +85,24 @@ class modele_forfait {
         $resultatRequete = $mysqli->query("SELECT * FROM forfaits ORDER BY id");
 
         foreach ($resultatRequete as $enregistrement) {
-            $liste[] = new modele_forfait($enregistrement['id'], $enregistrement['forfait'], $enregistrement['description'], $enregistrement['code'], $enregistrement['nom_etablissement'],$enregistrement['adresse_etablissement'], $enregistrement['ville_etablissement'], $enregistrement['telephone_etablissement'], $enregistrement['courriel_etablissement'], $enregistrement['site_web_etablissement'],$enregistrement['description_etablissement'], $enregistrement['date_debut'], $enregistrement['date_fin'], $enregistrement['prix'], $enregistrement['prenium']);
+            $liste[] = new modele_forfait(
+                $enregistrement['id'], 
+                $enregistrement['nom'], 
+                $enregistrement['description'], 
+                $enregistrement['code'], 
+                $enregistrement['nom_etablissement'],
+                $enregistrement['adresse_etablissement'], 
+                $enregistrement['ville_etablissement'], 
+                $enregistrement['telephone_etablissement'], 
+                $enregistrement['courriel_etablissement'], 
+                $enregistrement['site_web_etablissement'],
+                $enregistrement['description_etablissement'], 
+                $enregistrement['date_debut'], 
+                $enregistrement['date_fin'], 
+                $enregistrement['prix'], 
+                $enregistrement['nouveau_prix'], 
+                $enregistrement['prenium']
+            );
         }
 
         return $liste;
@@ -133,14 +150,14 @@ class modele_forfait {
         $mysqli = self::connecter();
         
         // Création d'une requête préparée
-        if ($requete = $mysqli->prepare("INSERT INTO forfaits(id, forfait, description, code, nom_etablissement, adresse_etablissement, ville_etablissement, telephone_etablissement, courriel_etablissement, site_web_etablissement, description_etablissement, date_debut, date_fin, courant_prix, rabais_nouveau_prix, prenium) VALUES(?, ?, ?, ?, ?)")) {      
+        if ($requete = $mysqli->prepare("INSERT INTO forfaits(id, forfait, description, code, nom_etablissement, adresse_etablissement, ville_etablissement, telephone_etablissement, courriel_etablissement, site_web_etablissement, description_etablissement, date_debut, date_fin, prix, nouveau_prix, prenium) VALUES(?, ?, ?, ?, ?)")) {      
 
         /************************* ATTENTION **************************/
         /* On ne fait présentement peu de validation des données.     */
         /* On revient sur cette partie dans les prochaines semaines!! */
         /**************************************************************/
 
-        $requete->bind_param("issssssssssssddi", $id, $nom, $description, $code, $nom_etablissement, $adresse_etablissement, $ville_etablissement, $telephone_etablissement, $courriel_etablissement, $site_web_etablissement, $description_etablissement, $date_debut, $date_fin, $courant_prix, $rabais_nouveau_prix, $prenium);
+        $requete->bind_param("isssssssssssddi", $id, $nom, $description, $code, $nom_etablissement, $adresse_etablissement, $ville_etablissement, $telephone_etablissement, $courriel_etablissement, $site_web_etablissement, $description_etablissement, $date_debut, $date_fin, $courant_prix, $rabais_nouveau_prix, $prenium);
 
         if($requete->execute()) { // Exécution de la requête
             $resultat->message = "Forfait ajouté";  // Message ajouté dans la page en cas d'ajout réussi
@@ -170,14 +187,14 @@ class modele_forfait {
         $mysqli = self::connecter();
         
         // Création d'une requête préparée
-        if ($requete = $mysqli->prepare("UPDATE forfaits SET forfait=?, description=?, code=?, nom_etablissement=?, adresse_etablissement=?, ville_etablissement=?, telephone_etablissement=?, courriel_etablissement=?, site_web_etablissement=?, description_etablissement=?, date_debut=?, date_fin=?, courant_prix=?, rabais_nouveau_prix=?, prenium=? WHERE id=?")) {      
+        if ($requete = $mysqli->prepare("UPDATE forfaits SET forfait=?, description=?, code=?, nom_etablissement=?, adresse_etablissement=?, ville_etablissement=?, telephone_etablissement=?, courriel_etablissement=?, site_web_etablissement=?, description_etablissement=?, date_debut=?, date_fin=?, prix=?, nouveau_prix=?, prenium=? WHERE id=?")) {      
 
         /************************* ATTENTION **************************/
         /* On ne fait présentement peu de validation des données.     */
         /* On revient sur cette partie dans les prochaines semaines!! */
         /**************************************************************/
 
-        $requete->bind_param("issssssssssssddi", $id, $forfait, $description, $code, $nom_etablissement, $adresse_etablissement, $ville_etablissement, $telephone_etablissement, $courriel_etablissement, $site_web_etablissement, $description_etablissement, $date_debut, $date_fin, $courant_prix, $rabais_nouveau_prix, $prenium);
+        $requete->bind_param("issssssssssssddi", $id, $nom, $description, $code, $nom_etablissement, $adresse_etablissement, $ville_etablissement, $telephone_etablissement, $courriel_etablissement, $site_web_etablissement, $description_etablissement, $date_debut, $date_fin, $courant_prix, $rabais_nouveau_prix, $prenium);
 
         if($requete->execute()) { // Exécution de la requête
             $resultat->message = "Forfait modifié";  // Message ajouté dans la page en cas d'ajout réussi
