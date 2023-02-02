@@ -124,7 +124,23 @@ class modele_forfait {
             $resultat_requete = $requete->get_result(); // Récupération de résultats de la requête¸
             
             if($enregistrement = $resultat_requete->fetch_assoc()) { // Récupération de l'enregistrement
-                $forfait = new modele_forfait($enregistrement['id'], $enregistrement['forfait'], $enregistrement['description'], $enregistrement['code'], $enregistrement['nom_etablissement'],$enregistrement['adresse_etablissement'], $enregistrement['ville_etablissement'], $enregistrement['telephone_etablissement'], $enregistrement['courriel_etablissement'], $enregistrement['site_web_etablissement'],$enregistrement['description_etablissement'], $enregistrement['date_debut'], $enregistrement['date_fin'], $enregistrement['prix'], $enregistrement['prenium']);
+                $forfait = new modele_forfait(
+                    $enregistrement['id'], 
+                    $enregistrement['nom'], 
+                    $enregistrement['description'], 
+                    $enregistrement['code'], 
+                    $enregistrement['nom_etablissement'],
+                    $enregistrement['adresse_etablissement'], 
+                    $enregistrement['ville_etablissement'], 
+                    $enregistrement['telephone_etablissement'], 
+                    $enregistrement['courriel_etablissement'], 
+                    $enregistrement['site_web_etablissement'],
+                    $enregistrement['description_etablissement'], 
+                    $enregistrement['date_debut'], 
+                    $enregistrement['date_fin'], 
+                    $enregistrement['prix'], 
+                    $enregistrement['nouveau_prix'], 
+                    $enregistrement['prenium']);
             } else {
                 http_response_code(404); // Envoi un code 404 au serveur
                 $resultat->message = "Erreur: Aucun forfait trouvé";

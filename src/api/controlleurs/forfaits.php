@@ -20,9 +20,9 @@ function afficherJSON() {
     /***
      * Fonction permettant de récupérer un forfait et de l'afficher au format JSON
      */
-    function afficherFicheJSON($id) {
-        $resultat = modele_forfait::ObtenirUn($id);
-        echo json_encode($resultat);
+    function afficherFicheJSON() {
+        $forfait = modele_forfait::ObtenirUn($_GET['id']);
+        echo json_encode($forfait);
     }
 
     /***
