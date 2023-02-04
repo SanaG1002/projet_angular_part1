@@ -21,7 +21,7 @@ export const  FORFAITS: Forfait[] = [
         dateDebut: "2022-03-04",
         dateFin: "2022-01-11",
         prix: 3704.65,
-        prenium: true,
+        premium: true,
         avis: [{
             note: 10,
             commentaire: "culpa ipsum consectetur reprehenderit"
@@ -49,7 +49,7 @@ export const  FORFAITS: Forfait[] = [
         dateFin: "2022-11-10",
         prix: 4960.91,
         nouveauPrix: 1540,
-        prenium: true,
+        premium: true,
         avis: [{
             note: 4,
             commentaire: "labore aliquip est reprehenderit voluptate elit adipisicing"
@@ -77,7 +77,7 @@ export const  FORFAITS: Forfait[] = [
         dateFin: "2022-03-25",
         prix: 4590.03,
         nouveauPrix: 3900.05,
-        prenium: false,
+        premium: false,
         avis: [{
             note: 8,
             commentaire: "esse adipisicing tempor esse ullamco esse veniam excepteur ea culpa esse dolor aliqua consequat veniam nisi ad nulla pariatur et dolore ex voluptate deserunt adipisicing culpa sint et ullamco enim ea ipsum dolor nulla enim ullamco minim et commodo id nisi aliqua labore incididunt dolore"
@@ -104,7 +104,7 @@ export const  FORFAITS: Forfait[] = [
         dateDebut: "2022-05-16",
         dateFin: "2022-01-10",
         prix: 5384.49,
-        prenium: false,
+        premium: false,
         avis: [{
             note: 6,
             commentaire: "labore aliquip est reprehenderit voluptate elit adipisicing labore aliquip est reprehenderit voluptate elit adipisicing"
@@ -132,7 +132,7 @@ export const  FORFAITS: Forfait[] = [
         dateFin: "2021-12-25",
         prix: 2697,
         nouveauPrix: 1500,
-        prenium: false,
+        premium: false,
         avis: [{
             note: 3,
             commentaire: "voluptate nisi"
@@ -159,7 +159,7 @@ export const  FORFAITS: Forfait[] = [
         dateDebut: "2022-03-30",
         dateFin: "2021-11-23",
         prix: 3238.95,
-        prenium: true,
+        premium: true,
         avis: [{
             note: 8,
             commentaire: "enim et minim duis duis qui do fugiat cupidatat esse id deserunt cupidatat cupidatat deserunt anim cillum adipisicing officia commodo commodo tempor nostrud excepteur elit ipsum esse ea consequat consectetur consequat dolor consectetur ullamco proident ex labore"

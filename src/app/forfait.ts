@@ -14,6 +14,6 @@ export interface Forfait {
     dateFin: string;
     prix: number;
     nouveauPrix?: number;
-    prenium: boolean;
+    premium: boolean;
     avis: Avis[]
 }

@@ -14,7 +14,7 @@ export class InfosForfaitComponent implements OnInit {
   @Input() categorie? = '';
   @Input() dateDebut? = '';
   @Input() dateFin? = ''; 
-  @Input() prenium? = true; 
+  @Input() premium? = true; 
   
 
 

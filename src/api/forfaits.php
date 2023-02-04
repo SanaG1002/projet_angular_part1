@@ -18,17 +18,13 @@
             $controllerForfaits->ajouterJSON($data);
             break; 
         case 'PUT': // CODE PERMETTANT DE METTRE À JOUR L'ENREGISTREMENT CORRESPONDANT À L'IDENTIFIANT PASSÉ EN PARAMÈTRE 
-            if(isset($_GET['id'])) { 
-                $corpsJSON = file_get_contents('php://input'); 
-                $data = json_decode($corpsJSON, TRUE);
-                $controllerForfaits->modifierJSON($data);
-            } 
+            $corpsJSON = file_get_contents('php://input'); 
+            $data = json_decode($corpsJSON, TRUE);
+            $controllerForfaits->modifierJSON($data);
             break; 
         case 'DELETE': // CODE PERMETTANT DE SUPPRIMER L'ENREGISTREMENT CORRESPONDANT À L'IDENTIFIANT PASSÉ EN PARAMÈTRE
-            if(isset($_GET['id'])) { 
-                $controllerForfaits->supprimerJSON($_GET['id']); 
-        } 
-        break; 
+            $controllerForfaits->supprimerJSON(); 
+            break; 
         default: 
 } 
 ?>

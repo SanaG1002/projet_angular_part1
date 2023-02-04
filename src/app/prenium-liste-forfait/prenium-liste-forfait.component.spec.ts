@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PreniumListeForfaitComponent } from './prenium-liste-forfait.component';
+import { premiumListeForfaitComponent } from './premium-liste-forfait.component';
 
-describe('PreniumListeForfaitComponent', () => {
-  let component: PreniumListeForfaitComponent;
-  let fixture: ComponentFixture<PreniumListeForfaitComponent>;
+describe('premiumListeForfaitComponent', () => {
+  let component: premiumListeForfaitComponent;
+  let fixture: ComponentFixture<premiumListeForfaitComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PreniumListeForfaitComponent ]
+      declarations: [ premiumListeForfaitComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PreniumListeForfaitComponent);
+    fixture = TestBed.createComponent(premiumListeForfaitComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

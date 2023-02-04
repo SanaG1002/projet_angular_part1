@@ -11,7 +11,7 @@ import { PetitForfaitComponent } from './petit-forfait/petit-forfait.component';
 import { PrixComponent } from './prix/prix.component';
 import { ImageComponent } from './image/image.component';
 import { InfosForfaitComponent } from './infos-forfait/infos-forfait.component';
-import { PreniumListeForfaitComponent } from './prenium-liste-forfait/prenium-liste-forfait.component';
+import { premiumListeForfaitComponent } from './premium-liste-forfait/premium-liste-forfait.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormAvisComponent } from './form-avis/form-avis.component';
 
@@ -43,7 +43,7 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
     PrixComponent,
     ImageComponent,
     InfosForfaitComponent,
-    PreniumListeForfaitComponent,
+    premiumListeForfaitComponent,
     EtablissementComponent,
     FormAvisComponent,
     FormulaireContactComponent
