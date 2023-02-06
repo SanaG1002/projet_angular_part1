@@ -202,11 +202,6 @@ class modele_forfait {
             premium
             ) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")) {      
 
-        /************************* ATTENTION **************************/
-        /* On ne fait présentement peu de validation des données.     */
-        /* On revient sur cette partie dans les prochaines semaines!! */
-        /**************************************************************/
-
         $requete->bind_param("issssssssssssddi", 
             $id, 
             $nom, 
@@ -275,11 +270,6 @@ class modele_forfait {
         // Création d'une requête préparée
         if ($requete = $mysqli->prepare("UPDATE forfaits SET nom=?, description=?, code=?, nom_etablissement=?, adresse_etablissement=?, ville_etablissement=?, telephone_etablissement=?, courriel_etablissement=?, site_web_etablissement=?, description_etablissement=?, date_debut=?, date_fin=?, prix=?, nouveau_prix=?, premium=? WHERE id=?")) {      
 
-        /************************* ATTENTION **************************/
-        /* On ne fait présentement peu de validation des données.     */
-        /* On revient sur cette partie dans les prochaines semaines!! */
-        /**************************************************************/
-
         $requete->bind_param("ssssssssssssddii", $nom, $description, $code, $nom_etablissement, $adresse_etablissement, $ville_etablissement, $telephone_etablissement, $courriel_etablissement, $site_web_etablissement, $description_etablissement, $date_debut, $date_fin, $courant_prix, $rabais_nouveau_prix, $premium, $id);
 
         if($requete->execute()) { // Exécution de la requête
@@ -312,11 +302,6 @@ class modele_forfait {
         
         // Création d'une requête préparée
         if ($requete = $mysqli->prepare("DELETE FROM forfaits WHERE id=?")) {      
-
-        /************************* ATTENTION **************************/
-        /* On ne fait présentement peu de validation des données.     */
-        /* On revient sur cette partie dans les prochaines semaines!! */
-        /**************************************************************/
 
         $requete->bind_param("i", $id);
 
