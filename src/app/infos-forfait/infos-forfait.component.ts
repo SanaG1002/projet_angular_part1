@@ -9,12 +9,12 @@ import { Component, OnInit, Input } from '@angular/core';
 export class InfosForfaitComponent implements OnInit {
 
   @Input() nom? = ''; 
-  @Input() description? = [""];
+  @Input() description? = '';
   @Input() code? = ''; 
   @Input() categorie? = '';
   @Input() dateDebut? = '';
   @Input() dateFin? = ''; 
-  @Input() premium? = true; 
+  @Input() premium? = 1; 
   
 
 

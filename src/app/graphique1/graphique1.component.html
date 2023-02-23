@@ -1,0 +1,14 @@
+<p>graphique1 works!</p>
+
+<h2>Comparaison des ventes de forfaits classiques et des forfaits premium en fonction des années</h2>
+
+<div>
+  <canvas id="monGraphique" baseChart 
+        [data]="mesDonnees"  
+        [options]="monGraphique.options" 
+        [legend]="monGraphique.legende"
+        [type]="monGraphique.type"
+        height="300px">
+  </canvas>
+</div>
+

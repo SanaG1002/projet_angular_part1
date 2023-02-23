@@ -5,12 +5,13 @@
 }
 
 .premiumStyle{
-    border: 5px solid rgb(178, 150, 13);
+    border: 5px solid #7761a7;
 }
 
 .forfaitCompletCard {
-    background-color: rgb(134, 168, 135);
+    background-color: #101011;
     margin-top: 20px;
+    color: white;
 }
 
 .forfaitCompletFlex {

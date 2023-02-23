@@ -39,10 +39,10 @@ CREATE TABLE `forfaits` (
   `courriel_etablissement` varchar(35) COLLATE utf8mb4_general_ci NOT NULL,
   `site_web_etablissement` varchar(35) COLLATE utf8mb4_general_ci NOT NULL,
   `description_etablissement` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `date_debut` date NOT NULL,
-  `date_fin` date NOT NULL,
+  `dateDebut` date NOT NULL,
+  `dateFin` date NOT NULL,
   `prix` decimal(10,0) NOT NULL,
-  `nouveau_prix` decimal(10,0) NOT NULL,
+  `nouveauPrix` decimal(10,0) NOT NULL,
   `premium` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -50,7 +50,7 @@ CREATE TABLE `forfaits` (
 -- Déchargement des données de la table `forfaits`
 --
 
-INSERT INTO `forfaits` (`id`, `nom`, `description`, `code`, `nom_etablissement`, `adresse_etablissement`, `ville_etablissement`, `telephone_etablissement`, `courriel_etablissement`, `site_web_etablissement`, `description_etablissement`, `date_debut`, `date_fin`, `prix`, `nouveau_prix`, `premium`) VALUES
+INSERT INTO `forfaits` (`id`, `nom`, `description`, `code`, `nom_etablissement`, `adresse_etablissement`, `ville_etablissement`, `telephone_etablissement`, `courriel_etablissement`, `site_web_etablissement`, `description_etablissement`, `dateDebut`, `dateFin`, `prix`, `nouveauPrix`, `premium`) VALUES
 (8, 'Dolce Vita en Italie', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 'ANI445', 'Hotel Dolce Vita', '061 Mavis Lights', 'Rome', '001021123688', 'dolce.vita@gmail.com', 'dolcevita.com', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', '2023-03-13', '2023-03-28', '2598', '1975', 1),
 (10, 'Evasion au cœur de la savane', 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ', 'VRI475', 'The king west inn', '061 Mavis Lights', 'Pretoria', '0014587963', 'thekingwestinn@gmail.com', 'thekingwestinn.com', 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ', '2023-01-15', '2023-05-17', '5641', '0', 1),
 (11, 'Connexion avec la nature', 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ', 'VRU127', 'Yoga center', '14 Mountain Lights', 'Vancouver ', '0445963874', 'yoga-center@gmail.com', 'yogacenter.ca', 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ', '2023-05-01', '2023-10-28', '348', '290', 1),

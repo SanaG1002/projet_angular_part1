@@ -1,0 +1,27 @@
+<Header>
+<mat-toolbar-row class="menuForfaits">
+  <a routerLink="/">
+    <span class="logoForfait">Les forfaits</span>
+  </a>
+
+  <div class="menuForfaitsCenter__btn">
+    <a mat-fab extended class="menuLink" routerLink="/page-forfait-voyage">
+      <mat-icon class="menuElement__color">airplanemode_active</mat-icon>
+      <p> Forfait voyage</p>
+    </a>
+    <a mat-fab extended  class="menuLink" routerLink="/page-forfait-derniere-chance">
+      <mat-icon class="menuElement__color">av_timer</mat-icon>
+      <p >Forfait dernière chance</p>
+    </a>
+    <a mat-fab extended class="menuLink" routerLink="/page-a-propos"  >
+      <mat-icon class="menuElement__color" >group_work</mat-icon>
+      <p>A propos de nous</p>
+    </a>
+  </div>
+
+  <a mat-fab extended class="menuAdmin__btn" routerLink="/page-admin" >
+    <mat-icon class="">perm_identity</mat-icon>
+    <p>Admin</p>
+  </a>
+</mat-toolbar-row>
+</Header>

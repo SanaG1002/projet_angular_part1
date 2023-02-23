@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { premiumListeForfaitComponent } from './premium-liste-forfait.component';
+import { PremiumListeForfaitComponent } from './premium-liste-forfait.component';
 
 describe('premiumListeForfaitComponent', () => {
-  let component: premiumListeForfaitComponent;
-  let fixture: ComponentFixture<premiumListeForfaitComponent>;
+  let component: PremiumListeForfaitComponent;
+  let fixture: ComponentFixture<PremiumListeForfaitComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ premiumListeForfaitComponent ]
+      declarations: [ PremiumListeForfaitComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(premiumListeForfaitComponent);
+    fixture = TestBed.createComponent(PremiumListeForfaitComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

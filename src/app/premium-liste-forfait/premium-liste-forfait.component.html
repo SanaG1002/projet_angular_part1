@@ -1,14 +1,11 @@
 
-
 <div *ngFor="let f of forfaits" >
-        <div *ngIf="f.premium">
+        <div *ngIf="f.premium == 1">
                 
                 <mat-card class="cardPetitForfait"  >
                        
                         <mat-card-header class="cardPetitForfaitHeader">
                                 <mat-card-title-group>
-                                        <img mat-card-image src={{f.image}} class="image" alt="Photo of a Shiba Inu">
-                                        
                                         <mat-card-title> 
                                                 {{f.nom}}
                                         </mat-card-title>

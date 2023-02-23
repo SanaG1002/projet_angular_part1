@@ -1,11 +1,10 @@
 
     <div>
-        <app-image [image]="forfait?.image" ></app-image>
         <div>     
             <app-infos-forfait  [nom]="forfait?.nom" ></app-infos-forfait>
             <app-prix [prix]="forfait?.prix" [nouveauPrix]="forfait?.nouveauPrix"></app-prix>
         </div>
-        <app-infos-forfait  [description]="forfait?.description" [code]="forfait?.code" [categorie]="forfait?.categorie" [dateDebut]="forfait?.dateDebut" [dateFin]="forfait?.dateFin" ></app-infos-forfait>
+        <app-infos-forfait  [description]="forfait?.description" [code]="forfait?.code" [dateDebut]="forfait?.dateDebut" [dateFin]="forfait?.dateFin" ></app-infos-forfait>
         <app-etablissement> [nomEtablissement]="etablissement?.nomEtablissement" [descriptionEtablissement]="etablissement?.descriptionEtablissement" [adresseEtablissement]="etablissement?.coordonneesEtablissement.adresseEtablissement" </app-etablissement>
     </div>
 

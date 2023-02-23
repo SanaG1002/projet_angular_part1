@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ImageComponent } from './image.component';
+import { PageAProposComponent } from './page-a-propos.component';
 
-describe('ImageComponent', () => {
-  let component: ImageComponent;
-  let fixture: ComponentFixture<ImageComponent>;
+describe('PageAProposComponent', () => {
+  let component: PageAProposComponent;
+  let fixture: ComponentFixture<PageAProposComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ImageComponent ]
+      declarations: [ PageAProposComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ImageComponent);
+    fixture = TestBed.createComponent(PageAProposComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

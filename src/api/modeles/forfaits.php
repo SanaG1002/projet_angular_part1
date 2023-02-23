@@ -4,55 +4,76 @@ require_once "./include/config.php";
 
 class modele_prix {
     public $prix; 
-    public $nouveau_prix; 
+    public $nouveauPrix; 
 
     /***
      * Fonction permettant de construire un objet de type modele_prix
      */
-    public function __construct($courant_prix, $rabais_nouveau_prix) {
+    public function __construct($courant_prix, $rabais_nouveauPrix) {
         $this->prix = $courant_prix;
-        $this->nouveau_prix = $rabais_nouveau_prix;
+        $this->nouveauPrix = $rabais_nouveauPrix;
         
     }
 }
+
+class modele_etablissement {
+    public $nomEtablissement;
+    public $adresseEtablissement;
+    public $villeEtablissement;
+    public $telephoneEtablissement;
+    public $courrielEtablissement;
+    public $siteWebEtablissement;
+    public $descriptionEtablissement;
+
+    public function __construct( 
+        $nom_etablissement, 
+        $adresse_etablissement, 
+        $ville_etablissement, 
+        $telephone_etablissement, 
+        $courriel_etablissement, 
+        $site_web_etablissement, 
+        $description_etablissement
+    )
+    {
+        $this->nomEtablissement = $nom_etablissement;
+        $this->descriptionEtablissement = $description_etablissement;
+        $this->adresseEtablissement = $adresse_etablissement;
+        $this->villeEtablissement = $ville_etablissement;
+        $this->telephoneEtablissement = $telephone_etablissement;
+        $this->courrielEtablissement = $courriel_etablissement;
+        $this->siteWebEtablissement = $site_web_etablissement;
+    }
+}
+
 
 class modele_forfait {
     public $id; 
     public $nom; 
     public $description;
     public $code; 
-    public $nom_etablissement;
-    public $adresse_etablissement; 
-    public $ville_etablissement; 
-    public $telephone_etablissement;
-    public $courriel_etablissement; 
-    public $site_web_etablissement;
-    public $description_etablissement; 
-    public $date_debut; 
-    public $date_fin;
-    public $prix_forfait; 
+    public $etablissement;
+    public $dateDebut; 
+    public $dateFin;
+    public $prix; 
+    public $nouveauPrix;
     public $premium;
     
     /***
      * Fonction permettant de construire un objet de type modele_forfait
      */
-    public function __construct($id, $nom, $description, $code, $nom_etablissement, $adresse_etablissement, $ville_etablissement, $telephone_etablissement, $courriel_etablissement, $site_web_etablissement, $description_etablissement, $date_debut, $date_fin, $courant_prix, $rabais_nouveau_prix, $premium) {
+    public function __construct($id, $nom, $description, $code, $nom_etablissement, $adresse_etablissement, $ville_etablissement, $telephone_etablissement, $courriel_etablissement, $site_web_etablissement, $description_etablissement, $date_debut, $date_fin, $courant_prix, $rabais_nouveauPrix, $premium) {
         $this->id = $id;
         $this->nom = $nom;
         $this->description = $description;
         $this->code = $code;
-        $this->nom_etablissement = $nom_etablissement;
-        $this->adresse_etablissement = $adresse_etablissement;
-        $this->ville_etablissement = $ville_etablissement;
-        $this->telephone_etablissement = $telephone_etablissement;
-        $this->courriel_etablissement = $courriel_etablissement;
-        $this->site_web_etablissement = $site_web_etablissement;
-        $this->description_etablissement = $description_etablissement;
-        $this->date_debut = $date_debut;
-        $this->date_fin = $date_fin;
-        $this->premium = $premium;
+        $this->etablissement = new modele_etablissement($nom_etablissement, $adresse_etablissement, $ville_etablissement, $telephone_etablissement, $courriel_etablissement, $site_web_etablissement, $description_etablissement);
 
-        $this->prix_forfait = new modele_prix($courant_prix, $rabais_nouveau_prix);
+        
+        $this->dateDebut = $date_debut;
+        $this->dateFin = $date_fin;
+        $this->premium = $premium;
+        $this->prix = $courant_prix;
+        $this->nouveauPrix = $rabais_nouveauPrix;
     }
 
     /***
@@ -161,7 +182,6 @@ class modele_forfait {
      * Fonction permettant d'ajouter un forfait
      */
     public static function ajouter (
-        $id, 
         $nom, 
         $description, 
         $code, 
@@ -172,10 +192,10 @@ class modele_forfait {
         $courriel_etablissement, 
         $site_web_etablissement, 
         $description_etablissement, 
-        $date_debut, 
-        $date_fin, 
+        $dateDebut, 
+        $dateFin, 
         $courant_prix, 
-        $rabais_nouveau_prix, 
+        $rabais_nouveauPrix, 
         $premium
         ) {
             
@@ -183,8 +203,8 @@ class modele_forfait {
         $mysqli = self::connecter();
         
         // Création d'une requête préparée
-        if ($requete = $mysqli->prepare("INSERT INTO forfaits(
-            id, 
+        if (
+            $requete = $mysqli->prepare("INSERT INTO forfaits(
             nom, 
             description, 
             code, 
@@ -200,36 +220,36 @@ class modele_forfait {
             prix, 
             nouveau_prix, 
             premium
-            ) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")) {      
+            ) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")
+        ) {      
 
-        $requete->bind_param("issssssssssssddi", 
-            $id, 
-            $nom, 
-            $description, 
-            $code, 
-            $nom_etablissement, 
-            $adresse_etablissement, 
-            $ville_etablissement, 
-            $telephone_etablissement, 
-            $courriel_etablissement, 
-            $site_web_etablissement, 
-            $description_etablissement, 
-            $date_debut, 
-            $date_fin, 
-            $courant_prix, 
-            $rabais_nouveau_prix, 
-            $premium
-        );
+            $requete->bind_param("ssssssssssssddd", 
+                $nom, 
+                $description, 
+                $code, 
+                $nom_etablissement, 
+                $adresse_etablissement, 
+                $ville_etablissement, 
+                $telephone_etablissement, 
+                $courriel_etablissement, 
+                $site_web_etablissement, 
+                $description_etablissement, 
+                $dateDebut, 
+                $dateFin, 
+                $courant_prix, 
+                $rabais_nouveauPrix, 
+                $premium
+            );
 
-        if($requete->execute()) { // Exécution de la requête
-            $resultat->message = "Forfait ajouté";  // Message ajouté dans la page en cas d'ajout réussi
-        } else {
-            http_response_code(500); // Envoi un code 500 au serveur
-            $resultat->message =  "Une erreur est survenue lors de l'ajout";  // Message ajouté dans la page en cas d’échec
-            $resultat->erreur = $requete->error;
-        }
+            if($requete->execute()) { // Exécution de la requête
+                $resultat->message = "Forfait ajouté";  // Message ajouté dans la page en cas d'ajout réussi
+            } else {
+                http_response_code(500); // Envoi un code 500 au serveur
+                $resultat->message =  "Une erreur est survenue lors de l'ajout";  // Message ajouté dans la page en cas d’échec
+                $resultat->erreur = $requete->error;
+            }
 
-        $requete->close(); // Fermeture du traitement
+            $requete->close(); // Fermeture du traitement
 
         } else {
             http_response_code(500); // Envoi un code 500 au serveur
@@ -256,10 +276,10 @@ class modele_forfait {
         $courriel_etablissement, 
         $site_web_etablissement, 
         $description_etablissement, 
-        $date_debut, 
-        $date_fin, 
+        $dateDebut, 
+        $dateFin, 
         $courant_prix, 
-        $rabais_nouveau_prix, 
+        $rabais_nouveauPrix, 
         $premium
         ) {
         
@@ -268,9 +288,41 @@ class modele_forfait {
             $mysqli = self::connecter();
         
         // Création d'une requête préparée
-        if ($requete = $mysqli->prepare("UPDATE forfaits SET nom=?, description=?, code=?, nom_etablissement=?, adresse_etablissement=?, ville_etablissement=?, telephone_etablissement=?, courriel_etablissement=?, site_web_etablissement=?, description_etablissement=?, date_debut=?, date_fin=?, prix=?, nouveau_prix=?, premium=? WHERE id=?")) {      
+        if ($requete = $mysqli->prepare("UPDATE forfaits SET 
+        nom=?, 
+        description=?, 
+        code=?, 
+        nom_etablissement=?, 
+        adresse_etablissement=?, 
+        ville_etablissement=?, 
+        telephone_etablissement=?, 
+        courriel_etablissement=?, 
+        site_web_etablissement=?, 
+        description_etablissement=?, 
+        date_debut=?, 
+        date_fin=?, 
+        prix=?, 
+        nouveau_prix=?, 
+        premium=? 
+        WHERE id=?")) {      
 
-        $requete->bind_param("ssssssssssssddii", $nom, $description, $code, $nom_etablissement, $adresse_etablissement, $ville_etablissement, $telephone_etablissement, $courriel_etablissement, $site_web_etablissement, $description_etablissement, $date_debut, $date_fin, $courant_prix, $rabais_nouveau_prix, $premium, $id);
+        $requete->bind_param("ssssssssssssdddi", 
+        $nom, 
+        $description, 
+        $code, 
+        $nom_etablissement, 
+        $adresse_etablissement, 
+        $ville_etablissement, 
+        $telephone_etablissement, 
+        $courriel_etablissement, 
+        $site_web_etablissement, 
+        $description_etablissement, 
+        $dateDebut, 
+        $dateFin, 
+        $courant_prix, 
+        $rabais_nouveauPrix, 
+        $premium, 
+        $id);
 
         if($requete->execute()) { // Exécution de la requête
             $resultat->message = "Forfait modifié";  // Message ajouté dans la page en cas d'ajout réussi

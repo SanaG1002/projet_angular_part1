@@ -1,0 +1,62 @@
+.menuForfaits{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    color:beige;
+    margin-bottom: 100px;
+}
+
+.logoForfait{
+    color:  rgb(194, 171, 243);
+    font-size: 50px;
+}
+
+.logoForfait:hover{
+    text-decoration: underline;
+}
+
+.menuForfaitsCenter__btn{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+
+.menuLink{
+    padding: 20px;
+    color: rgb(194, 171, 243);
+    text-decoration: none;
+    max-width: 120px;
+    font-size: 16px;
+}
+
+.menuLink:hover {
+    color: rgb(171, 137, 243); 
+}
+
+.menuElement__margin{
+    margin: 2px;
+}
+
+span{
+    font-size: 40px;
+}
+
+.menuAdmin__btn{
+    background-color: rgb(194, 171, 243);
+    color: #2c2c2c;
+    text-decoration: none;
+    border-radius: 50px;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.menuAdmin__btn:hover{
+    background-color:  rgb(179, 151, 239); 
+   
+}
+
+

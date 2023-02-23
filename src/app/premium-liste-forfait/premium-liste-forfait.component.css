@@ -1,14 +1,18 @@
 :host {
     display:block;
-    padding: 10px;
+    padding: 100px;
     margin: 10px ;
+    background-color: #f0eeee;
+    border-radius: 5px;
 }
 
 .cardPetitForfait {
-    background-color: rgb(16, 75, 51);
+    background-color: #405C77;
     color: azure;
-    margin: 10px;
+    margin: 20px;
     height: 250px;
+    width: 300px;
+    box-shadow: 8px 8px 8px #8b8686;
   }
 
   .cardPetitForfaitHeader {
@@ -27,4 +31,8 @@ text-decoration: line-through;
 
 .price{
 color: #f0ffff;
+}
+
+h2{
+  color:black;
 }

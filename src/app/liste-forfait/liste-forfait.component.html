@@ -2,10 +2,8 @@
 
 <div *ngFor="let f of forfaits"> 
   
-    <mat-card  [ngClass]="{'premiumStyle' : f.premium}" class="forfaitCompletCard">
+    <mat-card  [ngClass]="{'premiumStyle' : f.premium == 1}" class="forfaitCompletCard">
        <div class="forfaitCompletFlex">
-           
-            <img mat-card-image src={{f.image}} class="forfaitCompletImg" alt="Lorem ipsum">
            
             <div class="forfaitCompletText">
                 <mat-card-header>
@@ -36,15 +34,14 @@
         <mat-card-content>
             <p>{{ f.description }}</p>
             <p>{{ f.code }}</p>
-            <p>{{f.categorie}}</p>
             <p>{{f.dateDebut}}</p>
             <p>{{f.dateFin}}</p>
             <p>{{f.etablissement.nomEtablissement}}</p>
-            <p> {{f.etablissement.coordonneesEtablissement?.adresseEtablissement}} </p>
-            <p> {{f.etablissement.coordonneesEtablissement?.villeEtablissement}} </p>
-            <p> {{f.etablissement.coordonneesEtablissement?.telephoneEtablissement}} </p>
-            <p> {{f.etablissement.coordonneesEtablissement?.courrielEtablissement}} </p>
-            <p> {{f.etablissement.coordonneesEtablissement?.siteWebEtablissement}} </p>
+            <p> {{f.etablissement.adresseEtablissement}} </p>
+            <p> {{f.etablissement.villeEtablissement}} </p>
+            <p> {{f.etablissement.telephoneEtablissement}} </p>
+            <p> {{f.etablissement.courrielEtablissement}} </p>
+            <p> {{f.etablissement.siteWebEtablissement}} </p>
             <p>{{f.etablissement.descriptionEtablissement}}</p>
         </mat-card-content>
     </mat-card>
