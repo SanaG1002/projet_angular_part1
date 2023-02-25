@@ -40,7 +40,9 @@ class ControlleurForfait {
             isset($data['dateFin']) && 
             isset($data['prix']) && 
             isset($data['nouveauPrix']) && 
-            isset($data['premium'])
+            isset($data['premium'])&& 
+            isset($data['image']) && 
+            isset($data['pays'])
         )
 
             {
@@ -59,7 +61,9 @@ class ControlleurForfait {
                 $data['dateFin'], 
                 $data['prix'], 
                 $data['nouveauPrix'], 
-                $data['premium']
+                $data['premium'], 
+                $data['image'], 
+                $data['pays']
             );
             } else {
                 http_response_code(500); // Envoi un code 500 au serveur
@@ -89,7 +93,9 @@ class ControlleurForfait {
                 isset($data['dateFin']) && 
                 isset($data['prix']) && 
                 isset($data['nouveauPrix']) && 
-                isset($data['premium'])
+                isset($data['premium']) && 
+                isset($data['image']) && 
+                isset($data['pays'])
             )
             {
                 $resultat = modele_forfait::modifier(
@@ -108,7 +114,9 @@ class ControlleurForfait {
                     $data['dateFin'], 
                     $data['prix'], 
                     $data['nouveauPrix'], 
-                    $data['premium']
+                    $data['premium'], 
+                    $data['image'], 
+                    $data['pays']
                 ); 
             } else {
                 http_response_code(500); // Envoi un code 500 au serveur

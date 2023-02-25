@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Inject, OnInit, Output } from '@angular/core';
+import { Component, ViewEncapsulation, Inject, OnInit, Output } from '@angular/core';
 
 import { NgForm } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
@@ -9,7 +9,8 @@ import { ForfaitService } from '../forfait.service';
 @Component({
   selector: 'app-formulaire-forfait',
   templateUrl: './formulaire-forfait.component.html',
-  styleUrls: ['./formulaire-forfait.component.css']
+  styleUrls: ['./formulaire-forfait.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 
 export class FormulaireForfaitComponent implements OnInit {
@@ -27,15 +28,15 @@ export class FormulaireForfaitComponent implements OnInit {
       siteWebEtablissement: '',
       descriptionEtablissement:'',
     },
-    dateDebut: '',
-    dateFin: '',
+    dateDebut: 'DD-MM-YYYY',
+    dateFin: 'DD-MM-YYYY',
     prix: 0,
     nouveauPrix: 0,
-    premium: 1
+    premium: 1,
+    image: '',
+    pays: ''
   };
 
-  minDate: Date;
-  maxDate: Date;
   
   constructor(private forfaitService: ForfaitService,
     public dialogRef: MatDialogRef<FormulaireForfaitComponent>,
@@ -44,10 +45,6 @@ export class FormulaireForfaitComponent implements OnInit {
       if (data) { 
         this.newForfait = data;
       }
-
-      const currentYear = new Date().getFullYear();
-      this.minDate = new Date(currentYear - 20, 0, 1);
-      this.maxDate = new Date(currentYear + 1, 11, 31);
     }
 
     ngOnInit(): void {}
@@ -77,7 +74,4 @@ export class FormulaireForfaitComponent implements OnInit {
     annuler() { 
       this.dialogRef.close();
     }
-
-
-
 }

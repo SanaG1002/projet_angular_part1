@@ -1,4 +1,4 @@
-import { Avis } from "./avis"
+
 import { Etablissement } from "./etablissement"
 
 
@@ -12,5 +12,7 @@ export interface Forfait {
     dateFin: string,
     prix: number,
     nouveauPrix?: number,
-    premium: number
+    premium: number,
+    image: string,
+    pays: string
 }

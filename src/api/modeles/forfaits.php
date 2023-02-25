@@ -57,21 +57,51 @@ class modele_forfait {
     public $prix; 
     public $nouveauPrix;
     public $premium;
+    public $image;
+    public $pays;
     
     /***
      * Fonction permettant de construire un objet de type modele_forfait
      */
-    public function __construct($id, $nom, $description, $code, $nom_etablissement, $adresse_etablissement, $ville_etablissement, $telephone_etablissement, $courriel_etablissement, $site_web_etablissement, $description_etablissement, $date_debut, $date_fin, $courant_prix, $rabais_nouveauPrix, $premium) {
+    public function __construct(
+        $id, 
+        $nom, 
+        $description, 
+        $code, 
+        $nom_etablissement, 
+        $adresse_etablissement, 
+        $ville_etablissement, 
+        $telephone_etablissement, 
+        $courriel_etablissement, 
+        $site_web_etablissement, 
+        $description_etablissement, 
+        $date_debut, 
+        $date_fin, 
+        $courant_prix, 
+        $rabais_nouveauPrix, 
+        $premium,
+        $image, 
+        $pays
+        ) {
+        
         $this->id = $id;
         $this->nom = $nom;
         $this->description = $description;
         $this->code = $code;
-        $this->etablissement = new modele_etablissement($nom_etablissement, $adresse_etablissement, $ville_etablissement, $telephone_etablissement, $courriel_etablissement, $site_web_etablissement, $description_etablissement);
-
-        
+        $this->etablissement = new modele_etablissement(
+            $nom_etablissement, 
+            $adresse_etablissement, 
+            $ville_etablissement, 
+            $telephone_etablissement, 
+            $courriel_etablissement, 
+            $site_web_etablissement, 
+            $description_etablissement
+        );
         $this->dateDebut = $date_debut;
         $this->dateFin = $date_fin;
         $this->premium = $premium;
+        $this->image = $image;
+        $this->pays = $pays;
         $this->prix = $courant_prix;
         $this->nouveauPrix = $rabais_nouveauPrix;
     }
@@ -122,7 +152,9 @@ class modele_forfait {
                 $enregistrement['date_fin'], 
                 $enregistrement['prix'], 
                 $enregistrement['nouveau_prix'], 
-                $enregistrement['premium']
+                $enregistrement['premium'], 
+                $enregistrement['image'], 
+                $enregistrement['pays']
             );
         }
 
@@ -161,7 +193,9 @@ class modele_forfait {
                     $enregistrement['date_fin'], 
                     $enregistrement['prix'], 
                     $enregistrement['nouveau_prix'], 
-                    $enregistrement['premium']);
+                    $enregistrement['premium'], 
+                    $enregistrement['image'], 
+                    $enregistrement['pays']);
             } else {
                 http_response_code(404); // Envoi un code 404 au serveur
                 $resultat->message = "Erreur: Aucun forfait trouvé";
@@ -196,7 +230,9 @@ class modele_forfait {
         $dateFin, 
         $courant_prix, 
         $rabais_nouveauPrix, 
-        $premium
+        $premium,
+        $image, 
+        $pays
         ) {
             
         $resultat = new stdClass();
@@ -219,11 +255,13 @@ class modele_forfait {
             date_fin, 
             prix, 
             nouveau_prix, 
-            premium
-            ) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")
+            premium,
+            image, 
+            pays
+            ) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")
         ) {      
 
-            $requete->bind_param("ssssssssssssddd", 
+            $requete->bind_param("ssssssssssssdddss", 
                 $nom, 
                 $description, 
                 $code, 
@@ -238,7 +276,9 @@ class modele_forfait {
                 $dateFin, 
                 $courant_prix, 
                 $rabais_nouveauPrix, 
-                $premium
+                $premium,
+                $image, 
+                $pays
             );
 
             if($requete->execute()) { // Exécution de la requête
@@ -280,7 +320,9 @@ class modele_forfait {
         $dateFin, 
         $courant_prix, 
         $rabais_nouveauPrix, 
-        $premium
+        $premium,
+        $image, 
+        $pays
         ) {
         
             $resultat = new stdClass();
@@ -303,10 +345,12 @@ class modele_forfait {
         date_fin=?, 
         prix=?, 
         nouveau_prix=?, 
-        premium=? 
+        premium=?,
+        image=?, 
+        pays=? 
         WHERE id=?")) {      
 
-        $requete->bind_param("ssssssssssssdddi", 
+        $requete->bind_param("ssssssssssssdddssi", 
         $nom, 
         $description, 
         $code, 
@@ -321,7 +365,9 @@ class modele_forfait {
         $dateFin, 
         $courant_prix, 
         $rabais_nouveauPrix, 
-        $premium, 
+        $premium,
+        $image, 
+        $pays, 
         $id);
 
         if($requete->execute()) { // Exécution de la requête

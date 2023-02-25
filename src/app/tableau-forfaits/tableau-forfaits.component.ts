@@ -52,7 +52,9 @@ export class TableauForfaitsComponent implements OnInit {
     prix: 0,
     nouveauPrix: 0,
     premium: 1,
-    description: ''
+    description: '',
+    image: '',
+    pays: ''
   };
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;

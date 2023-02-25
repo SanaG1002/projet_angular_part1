@@ -11,10 +11,11 @@ export class InfosForfaitComponent implements OnInit {
   @Input() nom? = ''; 
   @Input() description? = '';
   @Input() code? = ''; 
-  @Input() categorie? = '';
   @Input() dateDebut? = '';
   @Input() dateFin? = ''; 
-  @Input() premium? = 1; 
+  @Input() premium? = 1;
+  @Input() image? = ''; 
+  @Input() pays? = '';
   
 
 

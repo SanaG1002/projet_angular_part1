@@ -18,7 +18,9 @@ export const  FORFAITS: Forfait[] = [
         dateFin: "2022-01-11",
         prix: 3704.65,
         premium: 1,
-       // image: "https://cdn.pixabay.com/photo/2022/10/24/18/10/street-7544046__340.jpg",
+        image: "img1",
+        pays: "pays1"
+      
       
     },
 
@@ -40,7 +42,8 @@ export const  FORFAITS: Forfait[] = [
         prix: 4960.91,
         nouveauPrix: 1540,
         premium: 1,
-       // image: "https://cdn.pixabay.com/photo/2022/08/21/17/47/color-7401750__340.jpg ",
+        image: "img2",
+        pays: "pays2"
     },
 
     {
@@ -61,7 +64,8 @@ export const  FORFAITS: Forfait[] = [
         prix: 4590.03,
         nouveauPrix: 3900.05,
         premium: 0,
-        //image: "https://cdn.pixabay.com/photo/2022/05/22/13/21/healthy-7213383_640.jpg",
+        image: "img3",
+        pays: "pays3"
        
     },
 
@@ -82,8 +86,8 @@ export const  FORFAITS: Forfait[] = [
         dateFin: "2022-01-10",
         prix: 5384.49,
         premium:  0,
-         //image: "https://cdn.pixabay.com/photo/2022/02/15/13/00/building-7014904__340.jpg",
-        
+        image: "img4",
+        pays: "pays4"
     },
 
     {
@@ -104,7 +108,8 @@ export const  FORFAITS: Forfait[] = [
         prix: 2697,
         nouveauPrix: 1500,
         premium:  0,
-        //image: "https://cdn.pixabay.com/photo/2021/10/27/09/36/elephants-6746586__340.jpg",
+        image: "img5",
+        pays: "pays5"
       
     },
 
@@ -125,7 +130,8 @@ export const  FORFAITS: Forfait[] = [
         dateFin: "2021-11-23",
         prix: 3238.95,
         premium:  1,
-         //image: "https://cdn.pixabay.com/photo/2022/04/18/13/27/yoga-7140566__340.jpg",
+        image: "img6",
+        pays: "pays6"
        
     }
 ]

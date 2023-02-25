@@ -4,8 +4,17 @@
             <app-infos-forfait  [nom]="forfait?.nom" ></app-infos-forfait>
             <app-prix [prix]="forfait?.prix" [nouveauPrix]="forfait?.nouveauPrix"></app-prix>
         </div>
-        <app-infos-forfait  [description]="forfait?.description" [code]="forfait?.code" [dateDebut]="forfait?.dateDebut" [dateFin]="forfait?.dateFin" ></app-infos-forfait>
-        <app-etablissement> [nomEtablissement]="etablissement?.nomEtablissement" [descriptionEtablissement]="etablissement?.descriptionEtablissement" [adresseEtablissement]="etablissement?.coordonneesEtablissement.adresseEtablissement" </app-etablissement>
+        <app-infos-forfait  
+            [description]="forfait?.description" 
+            [code]="forfait?.code" 
+            [dateDebut]="forfait?.dateDebut" 
+            [dateFin]="forfait?.dateFin" >
+        </app-infos-forfait>
+        <app-etablissement> 
+            [nomEtablissement]="etablissement?.nomEtablissement" 
+            [descriptionEtablissement]="etablissement?.descriptionEtablissement" 
+            [adresseEtablissement]="etablissement?.coordonneesEtablissement.adresseEtablissement" 
+        </app-etablissement>
     </div>
 
 

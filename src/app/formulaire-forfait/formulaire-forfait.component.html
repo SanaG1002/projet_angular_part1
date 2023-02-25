@@ -1,10 +1,9 @@
-<p>formulaire-forfait works!</p>
 
 <form #forfaitFormAjout="ngForm">
     <div>
         <mat-form-field>
             <mat-label>Forfait</mat-label>
-            <input matInput placeholder="Nom du forfait" required minlength="2" maxlength="50" name="nom" [(ngModel)]="newForfait.nom" #nom="ngModel">
+            <input matInput placeholder="Nom du forfait" required minlength="2" maxlength="50" name="nom" aria-label="nom" [(ngModel)]="newForfait.nom" #nom="ngModel">
         </mat-form-field>
         <mat-error *ngIf="nom.invalid && (nom.dirty || nom.touched) && nom.hasError('required')">
             Le nom est obligatoire.
@@ -15,94 +14,86 @@
         <mat-error *ngIf="nom.invalid && (nom.dirty || nom.touched) && nom.hasError('maxlength')">
             Le nom doit contenir au maximum 50 caractères.
         </mat-error>
-    </div>
 
-    <div>
-        <mat-form-field>
-            <mat-label>Déscription</mat-label>
-            <input matInput placeholder="Déscription du forfait" minlength="1" maxlength="255" name="description" [(ngModel)]="newForfait.description" >
-        </mat-form-field>
-    </div>
-
-    <div>
         <mat-form-field>
             <mat-label>Code</mat-label>
-            <input matInput placeholder="Code"  maxlength="50" name="code" [(ngModel)]="newForfait.code" #code="ngModel">
+            <input matInput placeholder="Code"  maxlength="50" name="code" aria-label="code" [(ngModel)]="newForfait.code" #code="ngModel">
+        </mat-form-field>
+   
+    </div>
+
+    <div>
+        
+        <mat-form-field>
+            <mat-label>Déscription</mat-label>
+            <input matInput placeholder="Déscription du forfait" minlength="1" maxlength="255" name="description" aria-label="description" [(ngModel)]="newForfait.description" >
         </mat-form-field>
     </div>
 
     <div>
         <mat-form-field>
             <mat-label>Nom de l'établissement</mat-label>
-            <input matInput placeholder="Nom de l'établissement"  maxlength="35" name="code" [(ngModel)]="newForfait.etablissement.nomEtablissement" #nomEtablissement="ngModel">
+            <input matInput placeholder="Nom de l'établissement"  maxlength="35" name="nomEtablissement" aria-label="nomEtablissement" [(ngModel)]="newForfait.etablissement.nomEtablissement" #nomEtablissement="ngModel">
         </mat-form-field>
-    </div>
 
-    <div>
         <mat-form-field>
             <mat-label>Adresse de l'établissement</mat-label>
-            <input matInput placeholder="Adresse de l'établissement"  maxlength="35" name="adresseEtablissement" [(ngModel)]="newForfait.etablissement.adresseEtablissement">
+            <input matInput placeholder="Adresse de l'établissement"  maxlength="35" name="adresseEtablissement" aria-label="adresseEtablissement" [(ngModel)]="newForfait.etablissement.adresseEtablissement">
         </mat-form-field>
     </div>
 
     <div>
         <mat-form-field>
             <mat-label>Ville de l'établissement</mat-label>
-            <input matInput placeholder="Ville de l'établissement"  maxlength="25" name="villeEtablissement" [(ngModel)]="newForfait.etablissement.villeEtablissement" >
+            <input matInput placeholder="Ville de l'établissement"  maxlength="25" name="villeEtablissement" aria-label="villeEtablissement" [(ngModel)]="newForfait.etablissement.villeEtablissement" >
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Téléphone de l'établissement</mat-label>
+            <input matInput placeholder="Téléphone de l'établissement"  maxlength="12" name="telephoneEtablissement" aria-label="telephoneEtablissement" [(ngModel)]="newForfait.etablissement.telephoneEtablissement" >
         </mat-form-field>
     </div>
 
-    <div>
-        <mat-form-field>
-            <mat-label>Téléphone de l'établissement</mat-label>
-            <input matInput placeholder="Téléphone de l'établissement"  maxlength="12" name="telephoneEtablissement" [(ngModel)]="newForfait.etablissement.telephoneEtablissement" >
-        </mat-form-field>
-    </div>
 
     <div>
         <mat-form-field>
             <mat-label>Courriel de l'établissement</mat-label>
-            <input matInput placeholder="Courriel de l'établissement"  maxlength="35" name="courrielEtablissement" [(ngModel)]="newForfait.etablissement.courrielEtablissement" >
+            <input matInput placeholder="Courriel de l'établissement"  maxlength="35" name="courrielEtablissement" aria-label="courrielEtablissement" [(ngModel)]="newForfait.etablissement.courrielEtablissement" >
         </mat-form-field>
-    </div>
 
-    <div>
         <mat-form-field>
             <mat-label>Site web de l'établissement</mat-label>
-            <input matInput placeholder="Site web de l'établissement"  maxlength="35" name="siteWebEtablissement" [(ngModel)]="newForfait.etablissement.siteWebEtablissement">
+            <input matInput placeholder="Site web de l'établissement"  maxlength="35" name="siteWebEtablissement" aria-label="siteWebEtablissement" [(ngModel)]="newForfait.etablissement.siteWebEtablissement">
         </mat-form-field>
     </div>
 
     <div>
         <mat-form-field>
             <mat-label>Déscription de l'établissement</mat-label>
-            <input matInput placeholder="Déscription de l'établissement"  maxlength="255" name="descriptionEtablissement" [(ngModel)]="newForfait.etablissement.descriptionEtablissement" >
+            <input matInput placeholder="Déscription de l'établissement"  maxlength="255" name="descriptionEtablissement" aria-label="descriptionEtablissement" [(ngModel)]="newForfait.etablissement.descriptionEtablissement" >
         </mat-form-field>
     </div>
 
     <div>
-        <mat-form-field appearance="fill">
+        <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>
                 Date de début
             </mat-label>
-            <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" aria-label="lorem" name="dateDebut" [(ngModel)]="newForfait.dateDebut" required>
+            <input matInput [matDatepicker]="picker" name="dateDebut" aria-label="dateDebut" [(ngModel)]="newForfait.dateDebut" required>
             <mat-hint>
-                MM/DD/YYYY
+                DD/MM/YYYY
             </mat-hint>
             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
+            <mat-datepicker  #picker></mat-datepicker>
         </mat-form-field>
 
-    </div>
-
-    <div>
         <mat-form-field appearance="fill">
             <mat-label>
                 Date de fin
             </mat-label>
-            <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker2" aria-label="lorem" name="dateFin" [(ngModel)]="newForfait.dateFin" required>
+            <input matInput [matDatepicker]="picker2" name="dateFin" aria-label="dateFin" [(ngModel)]="newForfait.dateFin" required>
             <mat-hint>
-                MM/DD/YYYY
+                DD/MM/YYYY
             </mat-hint>
             <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
             <mat-datepicker #picker2></mat-datepicker>
@@ -112,28 +103,36 @@
     <div>
         <mat-form-field>
             <mat-label>Prix</mat-label>
-            <input matInput placeholder="Prix" required number name="prix" [(ngModel)]="newForfait.prix" #prix="ngModel">
+            <input matInput placeholder="Prix" required number name="prix" aria-label="prix" [(ngModel)]="newForfait.prix" #prix="ngModel">
         </mat-form-field>
         <mat-error *ngIf="prix.invalid && (prix.dirty || prix.touched) && prix.hasError('required')">
             Le nom est obligatoire.
         </mat-error>
-    </div>
-
-    <div>
+   
         <mat-form-field>
             <mat-label>Nouveau prix</mat-label>
-            <input matInput placeholder="Nouveau prix" number name="nouveauPrix" [(ngModel)]="newForfait.nouveauPrix" #nouveauPrix="ngModel">
+            <input matInput placeholder="Nouveau prix" number name="nouveauPrix" aria-label="nouveauPrix" [(ngModel)]="newForfait.nouveauPrix" #nouveauPrix="ngModel">
         </mat-form-field>
     </div>
 
     <div>
-        <mat-checkbox  [(ngModel)]="newForfait.premium" #premium="ngModel">Forfait premium</mat-checkbox>
+        <mat-checkbox name="premium" [(ngModel)]="newForfait.premium" #premium="ngModel">Forfait premium</mat-checkbox>
+    </div>
+
+    <div>
+        <mat-form-field>
+            <mat-label>Image</mat-label>
+            <input matInput placeholder="Image" name="image" aria-label="image" [(ngModel)]="newForfait.image" #image="ngModel">
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field>
+            <mat-label>Pays</mat-label>
+            <input matInput placeholder="Pays" name="pays" aria-label="pays" [(ngModel)]="newForfait.pays" #pays="ngModel">
+        </mat-form-field>
     </div>
       
-
-
-
-
     
     <div>
         <button *ngIf="newForfait.id; else boutonAjout" mat-button mat-aria-label="Modifier" 
