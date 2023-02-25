@@ -65,7 +65,7 @@
         <th mat-header-cell *matHeaderCellDef mat-sort-header></th>
         <td mat-cell class="td-actions" *matCellDef="let forfaits">
             <button mat-icon-button aria-label="Modifier" (click)="openDialog(forfaits)"><mat-icon>edit</mat-icon></button>
-            <button mat-icon-button aria-label="Supprimer" (click)="deleteForfait(forfaits._id)"><mat-icon>delete</mat-icon></button>
+            <button mat-icon-button aria-label="Supprimer" (click)="deleteForfait(forfaits.id)"><mat-icon>delete</mat-icon></button>
         </td>
     </ng-container>
 
