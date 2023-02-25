@@ -1,10 +1,8 @@
 <p>page-forfait-voyage works!</p>
 
-
-
 <div *ngFor="let f of forfaits"> 
   
-    <mat-card *ngIf="" class="forfaitCompletCard">
+    <mat-card *ngIf="f.pays!='Canada'" class="forfaitCompletCard">
        <div class="forfaitCompletFlex">
            
             <div class="forfaitCompletText">
@@ -45,6 +43,7 @@
             <p> {{f.etablissement.courrielEtablissement}} </p>
             <p> {{f.etablissement.siteWebEtablissement}} </p>
             <p>{{f.etablissement.descriptionEtablissement}}</p>
+            <p>{{f.pays}}</p>
         </mat-card-content>
     </mat-card>
 </div>   
