@@ -17,9 +17,10 @@ export class Graphique1Component implements OnInit {
 
   public mesDonnees: ChartData<'bar', number[], string | string[]> = {
     labels: ['2018', '2019', '2020', '2021', '2022'],
+   
     datasets: [
-      { data: [65, 59, 80, 55, 40], label: 'Forfait classique' },
-      { data: [28, 48, 40, 19, 86], label: 'Forfait premium' }
+      { data: [65, 59, 80, 55, 40], label: 'Forfait classique', backgroundColor: '#405C77' },
+      { data: [28, 48, 40, 19, 86], label: 'Forfait premium', backgroundColor: '#537D74' } 
     ]
   };
 

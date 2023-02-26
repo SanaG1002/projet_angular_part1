@@ -11,12 +11,14 @@ import { ForfaitService } from '../forfait.service';
 })
 export class PageForfaitVoyageComponent implements OnInit {
   forfaits : Forfait[] = [];
+
   constructor(private forfaitService: ForfaitService) { }
 
   ngOnInit(): void {
     this.getForfaits();
   }
   getForfaits(): void {
+    console.log(this.getForfaits)
     this.forfaitService.getForfaits()
     .subscribe(resultat => this.forfaits = resultat);
   }

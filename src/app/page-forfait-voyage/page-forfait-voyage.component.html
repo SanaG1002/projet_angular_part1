@@ -1,56 +1,46 @@
-<p>page-forfait-voyage works!</p>
+<h1>Nos forfaits voyages</h1>
+<div *ngFor="let f of forfaits">
 
-<div *ngFor="let f of forfaits"> 
-  
-   
     <mat-card *ngIf="f.pays!='Canada'" class="forfaitCompletCard">
-       <div class="forfaitCompletFlex">
-           
-            <div class="forfaitCompletText">
-                <mat-card-header>
-                    <mat-card-title>
-                        {{ f.nom }}
-                        <img src="{{ f.image }}" alt=""> 
-                    </mat-card-title>
 
+        <mat-card-header class="forfaitCompletFlex">
+            <mat-card-title>
+                <h2>{{ f.nom }} </h2>
+            </mat-card-title>
 
-                    
-                    <mat-card-subtitle >
-                        <div *ngIf="f.nouveauPrix; else elseBlock">
-                            <div  [ngClass]="{'prixBarre' : 'nouveauPrix'}"> 
-                                <h3> {{f.prix}} $</h3> 
-                            </div>
-                            <div *ngIf="f.nouveauPrix">
-                                <h3> {{f.nouveauPrix}} $ </h3>
-                            </div>
-                            <div *ngIf="f.prix && f.nouveauPrix">
-                                <h4> {{f.prix-f.nouveauPrix}} $ </h4>
-                            </div>
-                        </div>
-                        <ng-template #elseBlock>
-                            {{f.prix}} $
-                        </ng-template>
-                    </mat-card-subtitle>
-                </mat-card-header>
-            </div>
-        </div>
+            <mat-card-subtitle class="forfaitCompletHeader">
+                <div *ngIf="f.nouveauPrix!= 0; else elseBlock">
+                <div [ngClass]="{'prixBarre' : 'nouveauPrix'}">
+                    <p> {{f.prix}} $</p>
+                </div>
+                <div [ngClass]="{'premiumprice' : f.premium == 1} " *ngIf="f.nouveauPrix!= 0">
+                    <p> {{f.nouveauPrix}} $ </p>
+                </div>
+                <div *ngIf="f.prix && f.nouveauPrix">
+                    <p>Un rabais de {{f.prix-f.nouveauPrix}} $ </p>
+                    <br>
+                </div>
+                </div>
+                <ng-template #elseBlock>
+                    <span> {{f.prix}} $ </span>  
+                </ng-template>
+               
+                <p class="dateMarge"><span>Date :</span>  {{f.dateDebut}} - {{f.dateFin}}</p>
+                <p> <span>Pays :</span>  {{f.pays}}</p>
+                <p> <span> Description :</span> {{ f.description }}</p>
+                <p> <span>Code : </span> {{ f.code }}</p>
+<br>
+                <mat-divider></mat-divider>
+<br>
+                <p> <span> Etablissement : </span>{{f.etablissement.nomEtablissement}}</p>
+                <p> <span> Adresse :</span> {{f.etablissement.adresseEtablissement}} - {{f.etablissement.villeEtablissement}} </p>
+                <p> <span>  Téléphone : </span>{{f.etablissement.telephoneEtablissement}} </p>
+                <p> <span> Courriel : </span>{{f.etablissement.courrielEtablissement}} </p>
+                <p> <span>Site web :</span>{{f.etablissement.siteWebEtablissement}} </p>
+                <p> <span>Description établissement :</span>{{f.etablissement.descriptionEtablissement}}</p>
+            </mat-card-subtitle>
 
-        <mat-card-content>
-            <p>{{ f.description }}</p>
-            <p>{{ f.code }}</p>
-            <p>{{f.dateDebut}}</p>
-            <p>{{f.dateFin}}</p>
-            <p>{{f.etablissement.nomEtablissement}}</p>
-            <p> {{f.etablissement.adresseEtablissement}} </p>
-            <p> {{f.etablissement.villeEtablissement}} </p>
-            <p> {{f.etablissement.telephoneEtablissement}} </p>
-            <p> {{f.etablissement.courrielEtablissement}} </p>
-            <p> {{f.etablissement.siteWebEtablissement}} </p>
-            <p>{{f.etablissement.descriptionEtablissement}}</p>
-            <p>{{f.pays}}</p>
-        </mat-card-content>
-    </mat-card>
-</div>   
-
-
-
+      <img mat-card-image src="{{ f.image }}" alt="">
+    </mat-card-header>
+  </mat-card>
+</div>
