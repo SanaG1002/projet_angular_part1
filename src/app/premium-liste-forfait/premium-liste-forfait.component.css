@@ -2,23 +2,27 @@
     display:block;
     padding: 100px;
     margin: 10px ;
-    background-color: #f0eeee;
+    background-color: #537D74;
     border-radius: 5px;
 }
 
+img{
+  width: 300px;
+}
+
+
 .cardPetitForfait {
     background-color: #405C77;
-    color: azure;
+    color: #1d2a37;
     margin: 20px;
-    height: 250px;
-    width: 300px;
-    box-shadow: 8px 8px 8px #8b8686;
+    max-width: 300px;
+    height: 500px;
   }
 
   .cardPetitForfaitHeader {
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap
+    flex-direction: column;
   }
  
 .prixBarre {
@@ -29,10 +33,18 @@ text-decoration: line-through;
   width: 50%;
 }
 
-.price{
-color: #f0ffff;
+span{
+  font-size: 22px;
+  color: #b88916;
+  font-weight: 500;
+  margin-bottom: 20px;
 }
 
-h2{
-  color:black;
+p{
+  display: flex;
+  align-items: center;
+}
+
+.cardPetitForfaitInfo{
+  margin-top: 20px;
 }

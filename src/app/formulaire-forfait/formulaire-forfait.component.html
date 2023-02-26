@@ -1,5 +1,7 @@
+<h3>Formulaire forfait</h3>
 
 <form #forfaitFormAjout="ngForm">
+      
     <div>
         <mat-form-field>
             <mat-label>Forfait</mat-label>
@@ -26,7 +28,8 @@
         
         <mat-form-field>
             <mat-label>Déscription</mat-label>
-            <input matInput placeholder="Déscription du forfait" minlength="1" maxlength="255" name="description" aria-label="description" [(ngModel)]="newForfait.description" >
+            <textarea matInput placeholder="Déscription du forfait" minlength="1" maxlength="255" name="description" aria-label="description" [(ngModel)]="newForfait.description" >
+            </textarea>
         </mat-form-field>
     </div>
 
@@ -70,7 +73,8 @@
     <div>
         <mat-form-field>
             <mat-label>Déscription de l'établissement</mat-label>
-            <input matInput placeholder="Déscription de l'établissement"  maxlength="255" name="descriptionEtablissement" aria-label="descriptionEtablissement" [(ngModel)]="newForfait.etablissement.descriptionEtablissement" >
+            <textarea  matInput placeholder="Déscription de l'établissement"  maxlength="255" name="descriptionEtablissement" aria-label="descriptionEtablissement" [(ngModel)]="newForfait.etablissement.descriptionEtablissement" >
+            </textarea>
         </mat-form-field>
     </div>
 

@@ -4,14 +4,57 @@
     padding: 20px;
 }
 
-.premiumStyle{
-    border: 5px solid #7761a7;
+p{
+    margin: 0px;
+    padding-bottom: 5px;
 }
 
-.forfaitCompletCard {
-    background-color: #101011;
+span {
+    font-weight: bold;
+}
+
+img{
+    max-width: 600px;
+  }
+  
+.dateMarge{
     margin-top: 20px;
-    color: white;
+}  
+
+.premiumStyle{
+    border: 5px solid #b88916;
+}
+
+.premiumprice{
+    font-size: 22px;
+    color: #b88916;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+
+.forfaitCompletCard {
+    background-color: #85796f;
+    margin-top: 20px;
+    color: #1d2a37;
+}
+.forfaitCompletHeader{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    padding-right: 20px;
+}
+
+.forfaitCompletFlex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+}
+
+.forfaitCompletTitle{
+    display: flex;
+    width: 100%;
 }
 
 .forfaitCompletFlex {
@@ -24,10 +67,8 @@
     padding-top: 5px;
 }
 
-.forfaitCompletText {
-    margin-left: 20px;
-}
-
 .prixBarre {
     text-decoration: line-through;
     }
+
+

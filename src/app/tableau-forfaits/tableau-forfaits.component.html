@@ -1,9 +1,9 @@
-<p>tableau-forfaits works!</p>
+<h2>Tableau de gestion des forfaits</h2>
 
  <!-- Bouton ajout forfait -->
 <div class="adminTop">
-    <button mat-icon-button aria-label="Ajouter" (click)="openDialog(undefined)">
-        <mat-icon>add</mat-icon>Ajouter un forfait
+    <button class="adminBtn" mat-icon-button aria-label="Ajouter" (click)="openDialog(undefined)">
+        <mat-icon>add</mat-icon>Ajout forfait
     </button>
 
     <!-- Formulaire de recherche (filtre) -->
@@ -64,8 +64,8 @@
     <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef mat-sort-header></th>
         <td mat-cell class="td-actions" *matCellDef="let forfaits">
-            <button mat-icon-button aria-label="Modifier" (click)="openDialog(forfaits)"><mat-icon>edit</mat-icon></button>
-            <button mat-icon-button aria-label="Supprimer" (click)="deleteForfait(forfaits.id)"><mat-icon>delete</mat-icon></button>
+            <button class="tableBtn" mat-icon-button aria-label="Modifier" (click)="openDialog(forfaits)"><mat-icon>edit</mat-icon></button>
+            <button class="tableBtn" mat-icon-button aria-label="Supprimer" (click)="deleteForfait(forfaits.id)"><mat-icon>delete</mat-icon></button>
         </td>
     </ng-container>
 
@@ -73,4 +73,4 @@
     <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
 </table>
 
-<mat-paginator [pageSizeOptions]="[10, 25, 100]" aria-label="Sélectionner la page des héros"></mat-paginator>
+<mat-paginator class="adminFooter" [pageSizeOptions]="[10, 25, 100]" aria-label="Sélectionner la page des héros"></mat-paginator>

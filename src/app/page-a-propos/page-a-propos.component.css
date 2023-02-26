@@ -1,0 +1,18 @@
+:host {
+    display:block;
+    padding: 100px;
+    margin: 10px ;
+    border-radius: 5px;
+}
+
+span{
+    font-style: italic;
+    font-weight: 600;
+}
+
+.aboutUsContent{
+    background-color: #537D74;
+    color: #1d2a37;
+    border: none;
+    padding: 20px;
+}

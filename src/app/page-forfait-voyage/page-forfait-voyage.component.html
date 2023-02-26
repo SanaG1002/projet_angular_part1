@@ -2,6 +2,7 @@
 
 <div *ngFor="let f of forfaits"> 
   
+   
     <mat-card *ngIf="f.pays!='Canada'" class="forfaitCompletCard">
        <div class="forfaitCompletFlex">
            
@@ -9,7 +10,10 @@
                 <mat-card-header>
                     <mat-card-title>
                         {{ f.nom }}
+                        <img src="{{ f.image }}" alt=""> 
                     </mat-card-title>
+
+
                     
                     <mat-card-subtitle >
                         <div *ngIf="f.nouveauPrix; else elseBlock">

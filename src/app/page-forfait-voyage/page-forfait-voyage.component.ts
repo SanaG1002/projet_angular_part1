@@ -20,5 +20,4 @@ export class PageForfaitVoyageComponent implements OnInit {
     this.forfaitService.getForfaits()
     .subscribe(resultat => this.forfaits = resultat);
   }
-
 }

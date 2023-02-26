@@ -51,6 +51,8 @@ import { Graphique1Component } from './graphique1/graphique1.component';
 
 import { NgChartsModule } from 'ng2-charts';
 import { Graphique2Component } from './graphique2/graphique2.component';
+import { MatDividerModule } from '@angular/material/divider';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 
@@ -102,7 +104,9 @@ import { Graphique2Component } from './graphique2/graphique2.component';
     MatDialogModule,
     MatSnackBarModule,
     MatTableModule,
-    NgChartsModule
+    NgChartsModule,
+    MatDividerModule,
+    MatGridListModule
 
   
   ],
