@@ -1,18 +1,8 @@
 :host {
     display:block;
-  
 }
 
 .flex{
     display: flex;
     justify-content: center;
-    
   }
-
-  /* couleur :  noir=2C2C2C
-                violet=C2ABF3
-                gris=C2ABF3
-                mauve=A888B4
-                bleu= #405C77
-
-  */

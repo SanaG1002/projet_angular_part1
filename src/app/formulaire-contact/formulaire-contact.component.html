@@ -1,5 +1,3 @@
-
-
 <form  class="formContact" [formGroup]="profileForm">
 
     <mat-form-field>
@@ -12,9 +10,6 @@
         <input matInput type="text" placeholder="Nom" formControlName="nom" aria-label="prenom">
     </mat-form-field>
 
-
-
-
     <mat-form-field>
         <mat-label>Courriel</mat-label>
         <input type="email" matInput id="courriel" formControlName="courriel" 
@@ -23,9 +18,6 @@
         <mat-error *ngIf="this.profileForm.get('courriel')?.invalid">Le courriel est invalide</mat-error>
     </mat-form-field>
 
-      
-
-    
     <mat-form-field>
         <mat-label>Téléphone</mat-label>
         <input matInput type="tel" placeholder="Téléphone" formControlName="telephone" aria-label="telephone">

@@ -11,7 +11,6 @@ export class FormRechercheComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
 
 
